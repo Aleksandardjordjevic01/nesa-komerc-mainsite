@@ -33,10 +33,22 @@ function PinIcon() {
   );
 }
 
-export default function PartnersGrid({ lang }: { lang: Locale }) {
+interface PartnersGridProps {
+  lang: Locale;
+  activeCity?: string | null;
+  onCityChange?: (city: string | null) => void;
+}
+
+export default function PartnersGrid({ lang, activeCity: activeCityProp, onCityChange }: PartnersGridProps) {
   const t = (translations[lang] ?? translations['sr']).salesNetworkPage;
 
-  const [activeCity, setActiveCity] = useState<string | null>(null);
+  const [internalCity, setInternalCity] = useState<string | null>(null);
+
+  const activeCity = activeCityProp !== undefined ? activeCityProp : internalCity;
+  const setActiveCity = (city: string | null) => {
+    if (onCityChange) onCityChange(city);
+    else setInternalCity(city);
+  };
 
   const filtered = activeCity
     ? PARTNERS.filter(p => p.cities.includes(activeCity))

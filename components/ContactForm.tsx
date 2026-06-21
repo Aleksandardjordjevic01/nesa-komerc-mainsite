@@ -4,6 +4,7 @@ import { useState } from 'react';
 import type { Locale } from '@/lib/i18n/translations';
 import { translations } from '@/lib/i18n/translations';
 import ReusableButton from '@/components/ui/ReusableButton';
+import Dropdown from '@/components/ui/Dropdown';
 
 export default function ContactForm({ lang }: { lang: Locale }) {
   const t = (translations[lang] ?? translations['sr']).contactPage.form;
@@ -131,22 +132,16 @@ export default function ContactForm({ lang }: { lang: Locale }) {
           </div>
         </div>
 
-        {/* Department select */}
+        {/* Department dropdown */}
         <div>
           <label htmlFor="cf-department" className={labelClass}>{t.labelDepartment}</label>
-          <select
+          <Dropdown
             id="cf-department"
-            name="department"
-            required
+            options={t.departments}
             value={form.department}
-            onChange={handleChange}
-            className={inputClass}
-          >
-            <option value="" disabled>—</option>
-            {t.departments.map((d) => (
-              <option key={d.value} value={d.value}>{d.label}</option>
-            ))}
-          </select>
+            onChange={(val) => setForm(prev => ({ ...prev, department: val }))}
+            placeholder="—"
+          />
         </div>
 
         {/* Message */}

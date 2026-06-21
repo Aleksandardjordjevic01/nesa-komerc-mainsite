@@ -27,6 +27,81 @@
   to { transform: translateX(-50%); }
 }
 
+@keyframes flame-travel {
+  0%   { background-position: -60% 0; opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { background-position: 160% 0; opacity: 0; }
+}
+
+@keyframes flame-glow-travel {
+  0%   { background-position: -60% 0; opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { background-position: 160% 0; opacity: 0; }
+}
+
+@keyframes flame-flicker {
+  0%,100% { opacity: 1; }
+  30%      { opacity: 0.82; }
+  60%      { opacity: 0.94; }
+  80%      { opacity: 0.78; }
+}
+
+.flame-border {
+  position: relative;
+  height: 1px;
+  overflow: visible;
+}
+
+.flame-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #1c0500;
+}
+
+.flame-border-glow {
+  position: absolute;
+  left: 0; right: 0;
+  top: -3px; bottom: -3px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(154, 52, 18, 0.2) 15%,
+    rgba(234, 88, 12, 0.55) 42%,
+    rgba(249, 115, 22, 0.65) 50%,
+    rgba(234, 88, 12, 0.55) 58%,
+    rgba(154, 52, 18, 0.2) 85%,
+    transparent 100%
+  );
+  background-size: 45% 100%;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  animation: flame-glow-travel 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.flame-border-line {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #431407 8%,
+    #9a3412 22%,
+    #ea580c 38%,
+    #f97316 50%,
+    #ea580c 62%,
+    #9a3412 78%,
+    #431407 92%,
+    transparent 100%
+  );
+  background-size: 45% 100%;
+  background-repeat: no-repeat;
+  animation: flame-travel 8s cubic-bezier(0.4, 0, 0.6, 1) infinite,
+             flame-flicker 0.6s ease-in-out infinite;
+}
+
 .animate-hero-text {
   animation: hero-fade-up 4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
 }

@@ -1,5 +1,6 @@
 import NavbarV2 from '@/components/NavbarV2';
 import Footer from '@/components/Footer';
+import BackToTop from '@/components/BackToTop';
 import { locales, type Locale } from '@/lib/i18n/translations';
 
 export function generateStaticParams() {
@@ -20,6 +21,7 @@ export default async function LangLayout({
       <NavbarV2 lang={lang} />
       <main className="flex flex-1 flex-col">{children}</main>
       <Footer lang={lang} />
+      <BackToTop />
     </>
   );
 }

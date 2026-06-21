@@ -33,12 +33,7 @@ export default async function ContactPage({
       </section>
 
       {/* Map — full viewport width */}
-      <section className="bg-white pb-0 pt-16">
-        <Container>
-          <p className="mb-6 text-[11px] font-semibold uppercase tracking-widest text-neutral-400">
-            {t.mapLabel}
-          </p>
-        </Container>
+      <section className="bg-white pb-0 pt-0">
         <div className="h-110 w-full">
           <ContactMap />
         </div>

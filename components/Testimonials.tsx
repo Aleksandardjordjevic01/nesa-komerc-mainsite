@@ -15,7 +15,7 @@ export default function Testimonials({ lang }: { lang: Locale }) {
               key={i}
               className="flex flex-col rounded-2xl border border-neutral-200/60 bg-white p-8"
             >
-              <p className="text-[20px] font-bold leading-snug tracking-[-0.02em] text-neutral-900">
+              <p className="text-[16px] font-bold leading-snug tracking-[-0.02em] text-neutral-900">
                 {item.quote}
               </p>
               <p className="mt-4 text-[14px] leading-relaxed text-neutral-400">

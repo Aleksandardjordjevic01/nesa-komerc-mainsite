@@ -5,8 +5,6 @@ import AboutSection from '@/components/AboutSection';
 import HeroCarousel from '@/components/HeroCarousel';
 import Advantages from '@/components/Advantages';
 import RetailSection from '@/components/RetailSection';
-import PartnersSection from '@/components/PartnersSection';
-
 export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = (await params) as { lang: Locale };
 
@@ -18,7 +16,6 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
       <HeroCarousel lang={lang} />
       <Advantages lang={lang} />
       <RetailSection lang={lang} />
-      <PartnersSection lang={lang} />
     </>
   );
 }

@@ -23,8 +23,11 @@ export default function Footer({ lang }: { lang: Locale }) {
 
   return (
     <footer className="bg-neutral-950">
-      {/* Top accent line */}
-      <div className="h-px bg-linear-to-r from-transparent via-red-600/50 to-transparent" />
+      {/* Top accent line — flame sweep */}
+      <div className="flame-border">
+        <div className="flame-border-glow" />
+        <div className="flame-border-line" />
+      </div>
 
       <Container className="py-16">
         {/* ── Header row: logo + tagline left | socials right ── */}

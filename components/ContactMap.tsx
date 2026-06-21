@@ -3,10 +3,10 @@
 import { useEffect, useRef } from 'react';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
-// Coordinates: Stevana Sinđelića 30, Svilajnac
-const LNG = 21.197068;
-const LAT = 44.236697;
-const ZOOM = 13;
+// Coordinates: Stevana Sinđelića 309, 35210 Svilajnac
+const LNG = 21.20521028650718;
+const LAT = 44.25864101138538;
+const ZOOM = 15;
 
 export default function ContactMap() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -34,23 +34,21 @@ export default function ContactMap() {
 
       mapInstance = map;
 
-      // Custom marker element — white rounded card with logo
+      // Custom marker element — orange gradient box with white logo
       const el = document.createElement('div');
       el.style.cssText = `
-        width:64px;height:64px;
-        background:white;
-        border-radius:18px;
-        box-shadow:0 6px 28px rgba(0,0,0,0.18),0 2px 6px rgba(0,0,0,0.10);
+        width:48px;height:48px;
+        background:linear-gradient(135deg,#f97316,#dc2626);
+        border-radius:12px;
+        box-shadow:0 8px 24px rgba(220,38,38,0.35),0 2px 8px rgba(0,0,0,0.15);
         display:flex;align-items:center;justify-content:center;
         overflow:hidden;
         cursor:pointer;
       `;
       const img = document.createElement('img');
       img.src = '/logo-clean.png';
-      img.width = 40;
-      img.height = 40;
       img.alt = 'Neša Komerc';
-      img.style.cssText = 'display:block;width:40px;height:40px;object-fit:contain;flex-shrink:0;';
+      img.style.cssText = 'display:block;width:34px;height:34px;object-fit:contain;filter:brightness(0) invert(1);';
       el.appendChild(img);
 
       const marker = new maplibre.Marker({ element: el, anchor: 'center' })

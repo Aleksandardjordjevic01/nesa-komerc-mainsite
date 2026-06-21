@@ -8,7 +8,7 @@ interface PageHeroProps {
 
 export default function PageHero({ badge, title, subtitle }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-neutral-950 pb-24 pt-44">
+    <section className="relative overflow-hidden bg-neutral-950 pb-24 pt-52">
       {/* Ambient glow */}
       <div className="pointer-events-none absolute -top-40 left-1/2 h-150 w-150 -translate-x-1/2 rounded-full bg-orange-600/20 blur-[120px]" />
 
@@ -19,7 +19,7 @@ export default function PageHero({ badge, title, subtitle }: PageHeroProps) {
         </span>
 
         {/* Title */}
-        <h1 className="mt-6 max-w-2xl text-[48px] font-extrabold leading-tight tracking-[-0.03em] text-white md:text-[64px]">
+        <h1 className="mt-6 max-w-5xl text-[48px] font-extrabold leading-tight tracking-normal text-white md:text-[64px]">
           {title}
         </h1>
 

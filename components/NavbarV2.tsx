@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Locale, locales, translations } from '@/lib/i18n/translations';
 import Container from '@/components/Container';
+import CatalogsModal from '@/components/CatalogsModal';
 
 interface NavbarV2Props {
   lang: Locale;
@@ -126,15 +127,17 @@ export default function NavbarV2({ lang, forceScrolled = false }: NavbarV2Props)
 
         {/* Right side */}
         <div className="absolute right-0 flex items-center gap-5">
-          <Link
-            href={`/${lang}/katalozi`}
-            className={`flex items-center gap-1.5 transition-colors duration-300 hover:opacity-70 ${scrolledText}`}
-          >
-            <PdfIcon className="h-5 w-5" />
-            <span className="text-[13px] font-semibold tracking-wider uppercase">
-              {t.catalogues}
-            </span>
-          </Link>
+          <CatalogsModal
+            lang={lang}
+            trigger={
+              <div className={`flex items-center gap-1.5 transition-colors duration-300 hover:opacity-70 ${scrolledText}`}>
+                <PdfIcon className="h-5 w-5" />
+                <span className="text-[13px] font-semibold tracking-wider uppercase">
+                  {t.catalogues}
+                </span>
+              </div>
+            }
+          />
           <span className={`h-4 w-px transition-colors duration-300 ${scrolledDivider}`} />
           <div className="flex items-center gap-1.5">
             {locales.map((locale, index) => (
@@ -253,60 +256,85 @@ export default function NavbarV2({ lang, forceScrolled = false }: NavbarV2Props)
           </button>
         </div>
 
-        {/* Nav links — take up remaining space */}
-        <nav className="flex flex-1 flex-col overflow-y-auto px-4 sm:px-6 pt-4 pb-8">
-          <ul className="flex flex-col flex-1">
+        {/* Nav links */}
+        <nav className="flex flex-1 flex-col overflow-y-auto px-5 sm:px-8 pt-2 pb-8">
+          <ul className="flex flex-col">
             {navLinks.map((link, i) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="flex items-center justify-between py-5 text-[22px] font-bold tracking-tight text-black border-b border-zinc-100 hover:text-zinc-500 transition-colors duration-200"
+                  className="group flex items-center justify-between border-b border-zinc-100 py-4 transition-colors duration-200 hover:text-orange-500"
                 >
-                  <span>{link.label}</span>
-                  <span className="text-zinc-300 text-lg">→</span>
+                  <div className="flex items-baseline gap-3">
+                    <span className="text-[11px] font-medium text-zinc-300 tabular-nums">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span className="text-[17px] font-medium tracking-tight text-zinc-800 transition-colors duration-200 group-hover:text-orange-500">
+                      {link.label}
+                    </span>
+                  </div>
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"
+                    className="h-3.5 w-3.5 text-zinc-300 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-orange-400">
+                    <path d="M3 8h10M9 4l4 4-4 4" />
+                  </svg>
                 </Link>
               </li>
             ))}
+
+            {/* Katalozi */}
+            <li>
+              <CatalogsModal
+                lang={lang}
+                trigger={
+                  <div
+                    onClick={() => setMenuOpen(false)}
+                    className="group flex w-full items-center justify-between border-b border-zinc-100 py-4 transition-colors duration-200"
+                  >
+                    <div className="flex items-baseline gap-3">
+                      <span className="text-[11px] font-medium text-zinc-300 tabular-nums">
+                        {String(navLinks.length + 1).padStart(2, '0')}
+                      </span>
+                      <span className="flex items-center gap-2 text-[17px] font-medium tracking-tight text-zinc-800 transition-colors duration-200 group-hover:text-orange-500">
+                        <PdfIcon className="h-4 w-4 text-orange-500" />
+                        {t.catalogues}
+                      </span>
+                    </div>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"
+                      className="h-3.5 w-3.5 text-zinc-300 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-orange-400">
+                      <path d="M3 8h10M9 4l4 4-4 4" />
+                    </svg>
+                  </div>
+                }
+              />
+            </li>
           </ul>
 
-          {/* Bottom strip: contact + language */}
-          <div className="mt-auto pt-8 flex flex-col gap-5">
-            {/* Katalozi */}
-            <Link
-              href={`/${lang}/katalozi`}
-              className="flex items-center gap-2 text-[14px] font-semibold tracking-wider uppercase text-black hover:opacity-60 transition-opacity duration-200"
-            >
-              <PdfIcon className="h-5 w-5" />
-              {t.catalogues}
-            </Link>
-
+          {/* Bottom: contact + language */}
+          <div className="mt-auto pt-8 flex flex-col gap-4">
             <div className="h-px bg-zinc-100" />
-
             <div className="flex items-center justify-between">
-              {/* Contact info */}
               <div className="flex flex-col gap-1">
-                <a href="tel:+38135881407" className="text-[13px] text-zinc-500 hover:text-black transition-colors duration-200">
+                <a href="tel:+38135881407" className="text-[12px] text-zinc-400 hover:text-black transition-colors duration-200">
                   +381 35 8814 077
                 </a>
-                <a href="mailto:office@nesa-komerc.com" className="text-[13px] text-zinc-500 hover:text-black transition-colors duration-200">
+                <a href="mailto:office@nesa-komerc.com" className="text-[12px] text-zinc-400 hover:text-black transition-colors duration-200">
                   office@nesa-komerc.com
                 </a>
               </div>
 
-              {/* Language switcher */}
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1">
                 {locales.map((locale, index) => (
                   <span key={locale} className="flex items-center">
                     <Link
                       href={getLocalizedPath(locale)}
-                      className={`text-[14px] font-bold tracking-widest transition-colors duration-200 ${
-                        lang === locale ? 'text-black' : 'text-zinc-400 hover:text-black'
+                      className={`text-[13px] font-semibold tracking-widest transition-colors duration-200 ${
+                        lang === locale ? 'text-black' : 'text-zinc-300 hover:text-black'
                       }`}
                     >
                       {locale.toUpperCase()}
                     </Link>
                     {index < locales.length - 1 && (
-                      <span className="mx-1.5 text-sm text-zinc-300">/</span>
+                      <span className="mx-1.5 text-xs text-zinc-200">/</span>
                     )}
                   </span>
                 ))}
