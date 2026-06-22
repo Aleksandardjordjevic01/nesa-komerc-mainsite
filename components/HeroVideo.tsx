@@ -15,7 +15,7 @@ export default function HeroVideo({ lang }: { lang: Locale }) {
     <section className="relative h-screen w-full overflow-hidden">
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        src="/video2.mp4"
+        src="/video3.mp4"
         autoPlay
         muted
         loop
