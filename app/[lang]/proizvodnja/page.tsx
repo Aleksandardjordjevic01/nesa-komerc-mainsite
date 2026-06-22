@@ -85,11 +85,11 @@ function Accordion({ title, body, image, index }: { title: string; body: string;
 
 /* ── Gallery images ── */
 const GALLERY = [
-  { src: '/img1.png', alt: 'Proizvodni pogon' },
-  { src: '/img2.png', alt: 'Zavarivanje' },
-  { src: '/img4.png', alt: 'Radijatori' },
-  { src: '/img3.png', alt: 'Kontrola kvaliteta' },
-  { src: '/img5.png', alt: 'Gotovi proizvodi' },
+  { src: '/production/pr10.webp', alt: 'Proizvodni pogon' },
+  { src: '/production/pr7.webp', alt: 'Zavarivanje' },
+  { src: '/production/pr11.webp', alt: 'Radijatori' },
+  { src: '/production/pr6.webp', alt: 'Kontrola kvaliteta' },
+  { src: '/production/pr3.webp', alt: 'Gotovi proizvodi' },
 ];
 
 /* ── Lightbox ── */
@@ -183,14 +183,14 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
               </svg>
 
               <div className="overflow-hidden rounded-2xl sm:rounded-3xl">
-                <Image src="/img1.png" alt="Pogon" width={760} height={540}
+                <Image src="/production/pr2.webp" alt="Pogon" width={760} height={540}
                   className="h-[240px] w-full object-cover sm:h-[340px] lg:h-[480px]" />
               </div>
 
               <div className="absolute -bottom-2 right-3 rounded-xl bg-neutral-950 px-4 py-3 shadow-2xl shadow-neutral-950/40 ring-1 ring-white/5 sm:-bottom-8 sm:-right-6 sm:rounded-2xl sm:px-6 sm:py-5">
                 <p className="text-[24px] font-black leading-none text-white sm:text-[38px]">6 bar</p>
                 <p className="mt-0.5 text-[10px] font-medium uppercase tracking-widest text-neutral-500 sm:mt-1 sm:text-[12px]">
-                  {lang === 'sr' ? 'Radni pritisak' : 'Working pressure'}
+                  {lang === 'sr' ? 'Radni pritisak' : lang === 'de' ? 'Arbeitsdruck' : 'Working pressure'}
                 </p>
               </div>
             </div>
@@ -198,28 +198,32 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
             {/* Text */}
             <div className="lg:pl-4">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-orange-500">
-                {lang === 'sr' ? 'Proizvodnja' : 'Production'}
+                {lang === 'sr' ? 'Proizvodnja' : lang === 'de' ? 'Produktion' : 'Production'}
               </span>
               <h2 className="mt-2 text-[36px] font-black uppercase leading-none tracking-tight text-neutral-900 sm:text-[48px] md:text-[56px] lg:text-[64px]">
-                {lang === 'sr' ? 'Radijatora' : 'Radiators'}
+                {lang === 'sr' ? 'Radijatora' : lang === 'de' ? 'Heizkörper' : 'Radiators'}
               </h2>
 
               <p className="mt-5 text-[14px] leading-relaxed text-neutral-600 sm:text-[15px]">
                 {lang === 'sr'
                   ? 'Od 2001. godine proizvodimo cevaste radijatore tipa STANDARD LUX i T-ŠANT. Radijatori se izrađuju od čeličnih cevi sa snagom od 300 do 2000 W i radnim pritiskom 6 bar.'
+                  : lang === 'de'
+                  ? 'Seit 2001 fertigen wir Röhrenheizkörper der Typen STANDARD LUX und T-ŠANT. Die Heizkörper werden aus Stahlrohren mit einer Leistung von 300 bis 2000 W und einem Arbeitsdruck von 6 bar gefertigt.'
                   : 'Since 2001 we have manufactured STANDARD LUX and T-ŠANT tubular radiators. Radiators are made from steel tubes with output from 300 to 2000 W and 6 bar working pressure.'}
               </p>
               <p className="mt-3 text-[14px] leading-relaxed text-neutral-600 sm:text-[15px]">
                 {lang === 'sr'
                   ? 'Nudimo radijatore u različitim dimenzijama od 85 mm do 120 mm, prilagođene svakom prostoru i potrebi.'
+                  : lang === 'de'
+                  ? 'Wir bieten Heizkörper in verschiedenen Abmessungen von 85 mm bis 120 mm, angepasst an jeden Raum und Bedarf.'
                   : 'We offer radiators in various sizes from 85 mm to 120 mm, tailored to any space and requirement.'}
               </p>
 
               <div className="mt-8 grid grid-cols-3 divide-x divide-neutral-100 rounded-xl border border-neutral-100 bg-neutral-50 sm:rounded-2xl">
                 {[
-                  { val: '2001', sub: lang === 'sr' ? 'Godina osnivanja' : 'Est. year' },
-                  { val: '500–2000W', sub: lang === 'sr' ? 'Snaga' : 'Output' },
-                  { val: '6 bar', sub: lang === 'sr' ? 'Pritisak' : 'Pressure' },
+                  { val: '2001', sub: lang === 'sr' ? 'Godina osnivanja' : lang === 'de' ? 'Gründungsjahr' : 'Est. year' },
+                  { val: '500–2000W', sub: lang === 'sr' ? 'Snaga' : lang === 'de' ? 'Leistung' : 'Output' },
+                  { val: '6 bar', sub: lang === 'sr' ? 'Pritisak' : lang === 'de' ? 'Druck' : 'Pressure' },
                 ].map(s => (
                   <div key={s.val} className="flex flex-col items-center gap-1 py-4 text-center sm:py-6">
                     <span className="text-[14px] font-black leading-none text-neutral-900 sm:text-[18px] md:text-[22px]">{s.val}</span>
@@ -240,7 +244,7 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
             {/* Image */}
             <div className="relative order-2 lg:order-1">
               <div className="overflow-hidden rounded-2xl sm:rounded-3xl">
-                <Image src="/img3.png" alt="Sertifikovani proizvodi" width={720} height={500}
+                <Image src="/production/pr5.webp" alt="Sertifikovani proizvodi" width={720} height={500}
                   className="h-[240px] w-full object-cover opacity-90 sm:h-[340px] lg:h-[460px]" />
                 <div className="absolute inset-0 rounded-2xl bg-linear-to-t from-neutral-950/60 to-transparent sm:rounded-3xl" />
               </div>
@@ -258,10 +262,10 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
             {/* Text */}
             <div className="order-1 lg:order-2">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-orange-500">
-                {lang === 'sr' ? 'Virtualni kvalitet — Stručni kadar' : 'Premium quality — Expert team'}
+                {lang === 'sr' ? 'Virtualni kvalitet — Stručni kadar' : lang === 'de' ? 'Premium-Qualität — Expertenteam' : 'Premium quality — Expert team'}
               </span>
               <h2 className="mt-2 text-[32px] font-black uppercase leading-[1.05] tracking-tight text-white sm:text-[40px] md:text-[48px] lg:text-[58px]">
-                {lang === 'sr' ? 'Sertifikovani proizvodi' : 'Certified products'}
+                {lang === 'sr' ? 'Sertifikovani proizvodi' : lang === 'de' ? 'Zertifizierte Produkte' : 'Certified products'}
               </h2>
               <p className="mt-4 text-[14px] leading-relaxed text-neutral-400 sm:text-[15px]">
                 {t.quality.body}
@@ -315,7 +319,7 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
                 {i === 0 && (
                   <div className="absolute bottom-3 left-3">
                     <p className="text-[11px] font-bold uppercase tracking-widest text-white/60">
-                      {lang === 'sr' ? 'Proizvodni pogon' : 'Production hall'}
+                      {lang === 'sr' ? 'Proizvodni pogon' : lang === 'de' ? 'Produktionshalle' : 'Production hall'}
                     </p>
                     <p className="text-[10px] text-white/30">Svilajnac · 6 000 m²</p>
                   </div>
@@ -331,10 +335,10 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
             <button type="button" onClick={() => openLightbox(0)}
               className="group relative overflow-hidden rounded-2xl cursor-zoom-in text-left"
               style={{ gridColumn: '1 / 3', gridRow: '1 / 3' }}>
-              <Image src="/img1.png" alt="Fabrika" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/production/pr10.webp" alt="Fabrika" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-neutral-950/50 to-transparent" />
               <div className="absolute bottom-5 left-5">
-                <p className="text-[13px] font-bold uppercase tracking-widest text-white/60">{lang === 'sr' ? 'Proizvodni pogon' : 'Production hall'}</p>
+                <p className="text-[13px] font-bold uppercase tracking-widest text-white/60">{lang === 'sr' ? 'Proizvodni pogon' : lang === 'de' ? 'Produktionshalle' : 'Production hall'}</p>
                 <p className="text-[11px] text-white/30">Svilajnac · 6 000 m²</p>
               </div>
               <div className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100">
@@ -343,29 +347,29 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
             </button>
             <button type="button" onClick={() => openLightbox(1)}
               className="group relative overflow-hidden rounded-2xl cursor-zoom-in" style={{ gridColumn: '3', gridRow: '1' }}>
-              <Image src="/img2.png" alt="Zavarivanje" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/production/pr7.webp" alt="Zavarivanje" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-neutral-950/10 group-hover:bg-neutral-950/30 transition-colors" />
               <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100"><ZoomIcon /></div>
             </button>
             <button type="button" onClick={() => openLightbox(2)}
               className="group relative overflow-hidden rounded-2xl cursor-zoom-in" style={{ gridColumn: '3', gridRow: '2' }}>
-              <Image src="/img4.png" alt="Radijatori" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/production/pr11.webp" alt="Radijatori" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-neutral-950/10 group-hover:bg-neutral-950/30 transition-colors" />
               <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100"><ZoomIcon /></div>
             </button>
           </div>
           <div className="mt-2.5 grid gap-2.5" style={{ gridTemplateColumns: '1fr 1.6fr', height: '200px' }}>
             <button type="button" onClick={() => openLightbox(3)} className="group relative overflow-hidden rounded-2xl cursor-zoom-in">
-              <Image src="/img3.png" alt="Kontrola kvaliteta" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/production/pr6.webp" alt="Kontrola kvaliteta" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-neutral-950/10 group-hover:bg-neutral-950/30 transition-colors" />
               <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100"><ZoomIcon /></div>
             </button>
             <button type="button" onClick={() => openLightbox(4)} className="group relative overflow-hidden rounded-2xl cursor-zoom-in text-left">
-              <Image src="/img5.png" alt="Gotovi proizvodi" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/production/pr3.webp" alt="Gotovi proizvodi" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-r from-neutral-950/30 to-transparent group-hover:from-neutral-950/50 transition-colors" />
               <div className="absolute bottom-5 right-5 flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 backdrop-blur-sm ring-1 ring-white/10">
                 <span className="h-2 w-2 rounded-full bg-orange-400" />
-                <span className="text-[12px] font-semibold text-white">{lang === 'sr' ? 'Gotovi radijatori' : 'Finished radiators'}</span>
+                <span className="text-[12px] font-semibold text-white">{lang === 'sr' ? 'Gotovi radijatori' : lang === 'de' ? 'Fertige Heizkörper' : 'Finished radiators'}</span>
               </div>
               <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100"><ZoomIcon /></div>
             </button>
@@ -421,7 +425,7 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
             <div className="lg:sticky lg:top-32">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-orange-500">{t.certificates.badge}</span>
               <h2 className="mt-2 text-[30px] font-black uppercase leading-[1.05] tracking-tight text-neutral-900 sm:text-[40px] md:text-[48px] lg:text-[56px]">
-                {lang === 'sr' ? 'Naši sertifikati' : 'Our certificates'}
+                {lang === 'sr' ? 'Naši sertifikati' : lang === 'de' ? 'Unsere Zertifikate' : 'Our certificates'}
               </h2>
               <p className="mt-4 text-[14px] leading-relaxed text-justify text-neutral-600 sm:text-[15px]">
                 {t.certificates.body}

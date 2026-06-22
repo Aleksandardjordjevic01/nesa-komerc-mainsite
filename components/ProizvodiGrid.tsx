@@ -57,6 +57,7 @@ export default function ProizvodiGrid({ lang, products, cta, sectionLabel, secti
   const [active, setActive] = useState<Product | null>(null);
   const [mounted, setMounted] = useState(false);
   const isSr = lang === 'sr';
+  const isDe = lang === 'de';
 
   useEffect(() => { setMounted(true); }, []);
 
@@ -144,14 +145,14 @@ export default function ProizvodiGrid({ lang, products, cta, sectionLabel, secti
                     onClick={() => setActive(null)}
                     className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600 px-6 py-3 text-[13px] font-bold text-white transition-opacity hover:opacity-90"
                   >
-                    {isSr ? 'Kontaktirajte nas' : 'Contact us'}
+                    {isSr ? 'Kontaktirajte nas' : isDe ? 'Kontaktieren Sie uns' : 'Contact us'}
                   </Link>
                   <button
                     type="button"
                     onClick={() => setActive(null)}
                     className="rounded-full border border-neutral-200 px-6 py-3 text-[13px] font-semibold text-neutral-600 transition-colors hover:bg-neutral-50"
                   >
-                    {isSr ? 'Zatvori' : 'Close'}
+                    {isSr ? 'Zatvori' : isDe ? 'Schließen' : 'Close'}
                   </button>
                 </div>
               </div>
@@ -211,7 +212,7 @@ export default function ProizvodiGrid({ lang, products, cta, sectionLabel, secti
                     {/* Hover hint */}
                     <div className="absolute inset-0 flex items-end justify-end p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                       <span className="flex items-center gap-1.5 rounded-full bg-orange-500 px-3 py-1.5 text-[11px] font-semibold text-white shadow-lg">
-                        {isSr ? 'Saznaj više' : 'Learn more'}
+                        {isSr ? 'Saznaj više' : isDe ? 'Mehr erfahren' : 'Learn more'}
                         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3">
                           <path d="M3 8h10M9 4l4 4-4 4" />
                         </svg>

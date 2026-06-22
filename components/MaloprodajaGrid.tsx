@@ -15,30 +15,32 @@ interface Category {
   image: string;
   nameSr: string;
   nameEn: string;
+  nameDe: string;
   descSr: string;
   descEn: string;
+  descDe: string;
   brands: string[];
 }
 
 /* ── Data ── */
 const HEATING: Category[] = [
-  { id: 'kotlovi-peci', image: '/img1.png', nameSr: 'Kotlovi i peći na drvo i pelet', nameEn: 'Wood & pellet boilers', descSr: 'Kotlovi na pelet 12–35 kW i čelični kotlovi za čvrsto gorivo 20–60 kW. Visok stepen iskorišćenja energije, pouzdani u svim klimatskim uslovima.', descEn: 'Pellet boilers 12–35 kW and steel solid-fuel boilers 20–60 kW. High energy efficiency, reliable in all climates.', brands: ['ALFA', 'Centrometal', 'KEPO', 'Megal'] },
-  { id: 'toplotne-pumpe', image: '/img2.png', nameSr: 'Toplotne pumpe', nameEn: 'Heat pumps', descSr: 'Sistemi vazduh–voda, voda–voda i zemlja–voda sa DC inverter tehnologijom za uštedu električne energije i optimalan komfor grejanja i hlađenja.', descEn: 'Air-to-water, water-to-water and ground-to-water systems with DC inverter technology for energy savings and optimal comfort.', brands: ['Vaillant', 'Bosch', 'Ferroli'] },
-  { id: 'radijatori', image: '/nx-lux.png', nameSr: 'Radijatori', nameEn: 'Radiators', descSr: 'Panelni, aluminijumski i cevasti radijatori za svaki tip prostora. Dostupne različite dimenzije i boje RAL palete.', descEn: 'Panel, aluminium and tubular radiators for every space type. Available in various sizes and RAL palette colours.', brands: ['MI-Term', 'Global', 'Lipovica', 'Neša Komerc'] },
-  { id: 'cevi-fitinzi', image: '/img4.png', nameSr: 'Cevi i fitinzi', nameEn: 'Pipes & fittings', descSr: 'Bakarne cevi Ø8–54 mm, bakarni, mesingani, pocinkovani fitinzi, Alpex i PEX sistemi za sve vrste instalacija centralnog grejanja i vodovoda.', descEn: 'Copper pipes Ø8–54 mm, copper, brass, galvanised fittings, Alpex and PEX systems for all central heating and plumbing installations.', brands: ['Viega', 'Caleffi', 'Henco', 'Giacomini'] },
-  { id: 'ekspanzione-posude', image: '/img5.png', nameSr: 'Ekspanzione posude', nameEn: 'Expansion vessels', descSr: 'Sigurnosni uređaji koji preuzimaju višak zapremine vode u sistemima centralnog grejanja, čime se sprečava rast pritiska i oštećenje instalacija.', descEn: 'Safety devices that absorb excess water volume in central heating systems, preventing pressure build-up and installation damage.', brands: ['Imera'] },
-  { id: 'kotlovi-gas-struja', image: '/img1.png', nameSr: 'Kotlovi na gas i struju', nameEn: 'Gas & electric boilers', descSr: 'Kondenzacioni gasni kotlovi kompaktnih dimenzija i električni zidni kotlovi snage 6–36 kW za sve tipove stambenih i poslovnih objekata.', descEn: 'Compact condensing gas boilers and electric wall boilers 6–36 kW for all types of residential and commercial properties.', brands: ['Bosch', 'Vaillant', 'Ekopan DM'] },
-  { id: 'podno-grejanje', image: '/img2.png', nameSr: 'Podno grejanje', nameEn: 'Underfloor heating', descSr: 'Stiropor ploče sa čepovima za cevi 16–20 mm i cevna izolacija Sanflex koja redukuje gubitke toplote i do 80% u sistemima grejanja i hlađenja.', descEn: 'Insulation panels with pipe studs for 16–20 mm pipes and Sanflex tube insulation that reduces heat losses by up to 80%.', brands: ['Sanflex'] },
-  { id: 'dimovodi', image: '/img3.png', nameSr: 'Dimovodi', nameEn: 'Flue pipes', descSr: 'Crni, inox i dimovodi za gasne kotlove u dimenzijama Fi 80–200 mm. Dostupni reduciri, kolena i svi elementi za fleksibilnu montažu.', descEn: 'Black, stainless and gas-boiler flue pipes, sizes Fi 80–200 mm. Reducers, elbows and all elements for flexible installation.', brands: ['OSA', 'KEPO'] },
-  { id: 'pumpe', image: '/img4.png', nameSr: 'Pumpe', nameEn: 'Pumps', descSr: 'Cirkulacione pumpe za sisteme centralnog grejanja, hlađenja i klimatizacije. Izrađene od liva, nerđajućeg čelika i impregniranog metala.', descEn: 'Circulation pumps for central heating, cooling and air-conditioning systems. Made from cast iron, stainless steel and impregnated metal.', brands: ['Grundfos', 'Wilo', 'IMP', 'HST'] },
-  { id: 'solarna-oprema', image: '/img5.png', nameSr: 'Solarna oprema', nameEn: 'Solar equipment', descSr: 'Vakumski i pločasti solarni kolektori — besplatna solarna energija omogućava uštedu do 60% energije za grejanje vode i 35% za grejanje prostora.', descEn: 'Vacuum and flat-plate solar collectors — free solar energy saves up to 60% on water heating and 35% on space heating.', brands: ['Burnit', 'Centrometal'] },
-  { id: 'razdelnici-sabirnici', image: '/img1.png', nameSr: 'Razdelnici i sabirnici', nameEn: 'Manifolds & collectors', descSr: 'Mesingani, inox i plastični razdelnici za sisteme podnog grejanja. Čine jednostavan sistem za pojedinačne spojeve grejnih tela.', descEn: 'Brass, stainless and plastic manifolds for underfloor heating systems. A simple system for individual connections of heating bodies.', brands: ['Tesa', 'Herz'] },
-  { id: 'ventili', image: '/img2.png', nameSr: 'Ventili', nameEn: 'Valves', descSr: 'Termostatski, vodovodne, gasni, nepovratni i mešni ventili za sve sisteme. Regulišu protok tečnosti i gasova delimičnim ili potpunim zatvaranjem.', descEn: 'Thermostatic, water, gas, non-return and mixing valves for all systems. They regulate the flow of liquids and gases by partial or full closure.', brands: ['Caleffi', 'Herz', 'Icma', 'Esbe'] },
+  { id: 'kotlovi-peci', image: '/proizvodi/kotlovi-pelet.webp', nameSr: 'Kotlovi i peći na drvo i pelet', nameEn: 'Wood & pellet boilers', descSr: 'Kotlovi na pelet 12–35 kW i čelični kotlovi za čvrsto gorivo 20–60 kW. Visok stepen iskorišćenja energije, pouzdani u svim klimatskim uslovima.', descEn: 'Pellet boilers 12–35 kW and steel solid-fuel boilers 20–60 kW. High energy efficiency, reliable in all climates.', nameDe: 'Holz- & Pelletkessel', descDe: 'Pelletkessel 12–35 kW und Festbrennstoff-Stahlkessel 20–60 kW. Hohe Energieeffizienz, zuverlässig bei allen klimatischen Bedingungen.', brands: ['ALFA', 'Centrometal', 'KEPO', 'Megal'] },
+  { id: 'toplotne-pumpe', image: '/proizvodi/pumpe.webp', nameSr: 'Toplotne pumpe', nameEn: 'Heat pumps', descSr: 'Sistemi vazduh–voda, voda–voda i zemlja–voda sa DC inverter tehnologijom za uštedu električne energije i optimalan komfor grejanja i hlađenja.', descEn: 'Air-to-water, water-to-water and ground-to-water systems with DC inverter technology for energy savings and optimal comfort.', nameDe: 'Wärmepumpen', descDe: 'Luft-Wasser-, Wasser-Wasser- und Erd-Wasser-Systeme mit DC-Inverter-Technologie für Energieeinsparung und optimalen Heiz- und Kühlkomfort.', brands: ['Vaillant', 'Bosch', 'Ferroli'] },
+  { id: 'radijatori', image: '/proizvodi/radijatori.webp', nameSr: 'Radijatori', nameEn: 'Radiators', descSr: 'Panelni, aluminijumski i cevasti radijatori za svaki tip prostora. Dostupne različite dimenzije i boje RAL palete.', descEn: 'Panel, aluminium and tubular radiators for every space type. Available in various sizes and RAL palette colours.', nameDe: 'Heizkörper', descDe: 'Platten-, Aluminium- und Röhrenheizkörper für jeden Raumtyp. Erhältlich in verschiedenen Abmessungen und Farben der RAL-Palette.', brands: ['MI-Term', 'Global', 'Lipovica', 'Neša Komerc'] },
+  { id: 'cevi-fitinzi', image: '/proizvodi/cevi.webp', nameSr: 'Cevi i fitinzi', nameEn: 'Pipes & fittings', descSr: 'Bakarne cevi Ø8–54 mm, bakarni, mesingani, pocinkovani fitinzi, Alpex i PEX sistemi za sve vrste instalacija centralnog grejanja i vodovoda.', descEn: 'Copper pipes Ø8–54 mm, copper, brass, galvanised fittings, Alpex and PEX systems for all central heating and plumbing installations.', nameDe: 'Rohre & Fittings', descDe: 'Kupferrohre Ø8–54 mm, Kupfer-, Messing- und verzinkte Fittings, Alpex- und PEX-Systeme für alle Installationen von Zentralheizung und Wasserversorgung.', brands: ['Viega', 'Caleffi', 'Henco', 'Giacomini'] },
+  { id: 'ekspanzione-posude', image: '/proizvodi/posude.webp', nameSr: 'Ekspanzione posude', nameEn: 'Expansion vessels', descSr: 'Sigurnosni uređaji koji preuzimaju višak zapremine vode u sistemima centralnog grejanja, čime se sprečava rast pritiska i oštećenje instalacija.', descEn: 'Safety devices that absorb excess water volume in central heating systems, preventing pressure build-up and installation damage.', nameDe: 'Ausdehnungsgefäße', descDe: 'Sicherheitsvorrichtungen, die das überschüssige Wasservolumen in Zentralheizungssystemen aufnehmen und so Druckanstieg und Schäden an der Installation verhindern.', brands: ['Imera'] },
+  { id: 'kotlovi-gas-struja', image: '/proizvodi/kotlovi-drugo.webp', nameSr: 'Kotlovi na gas i struju', nameEn: 'Gas & electric boilers', descSr: 'Kondenzacioni gasni kotlovi kompaktnih dimenzija i električni zidni kotlovi snage 6–36 kW za sve tipove stambenih i poslovnih objekata.', descEn: 'Compact condensing gas boilers and electric wall boilers 6–36 kW for all types of residential and commercial properties.', nameDe: 'Gas- & Elektrokessel', descDe: 'Kompakte Gas-Brennwertkessel und elektrische Wandkessel mit 6–36 kW für alle Arten von Wohn- und Gewerbeobjekten.', brands: ['Bosch', 'Vaillant', 'Ekopan DM'] },
+  { id: 'podno-grejanje', image: '/proizvodi/podno.webp', nameSr: 'Podno grejanje', nameEn: 'Underfloor heating', descSr: 'Stiropor ploče sa čepovima za cevi 16–20 mm i cevna izolacija Sanflex koja redukuje gubitke toplote i do 80% u sistemima grejanja i hlađenja.', descEn: 'Insulation panels with pipe studs for 16–20 mm pipes and Sanflex tube insulation that reduces heat losses by up to 80%.', nameDe: 'Fußbodenheizung', descDe: 'Styroporplatten mit Noppen für Rohre 16–20 mm und Sanflex-Rohrisolierung, die Wärmeverluste in Heiz- und Kühlsystemen um bis zu 80% reduziert.', brands: ['Sanflex'] },
+  { id: 'dimovodi', image: '/proizvodi/dimnecevi.webp', nameSr: 'Dimovodi', nameEn: 'Flue pipes', descSr: 'Crni, inox i dimovodi za gasne kotlove u dimenzijama Fi 80–200 mm. Dostupni reduciri, kolena i svi elementi za fleksibilnu montažu.', descEn: 'Black, stainless and gas-boiler flue pipes, sizes Fi 80–200 mm. Reducers, elbows and all elements for flexible installation.', nameDe: 'Abgasrohre', descDe: 'Schwarze, Edelstahl- und Abgasrohre für Gaskessel in den Abmessungen Fi 80–200 mm. Reduzierungen, Bögen und alle Elemente für flexible Montage erhältlich.', brands: ['OSA', 'KEPO'] },
+  { id: 'pumpe', image: '/proizvodi/ppumpe.webp', nameSr: 'Pumpe', nameEn: 'Pumps', descSr: 'Cirkulacione pumpe za sisteme centralnog grejanja, hlađenja i klimatizacije. Izrađene od liva, nerđajućeg čelika i impregniranog metala.', descEn: 'Circulation pumps for central heating, cooling and air-conditioning systems. Made from cast iron, stainless steel and impregnated metal.', nameDe: 'Pumpen', descDe: 'Umwälzpumpen für Zentralheizungs-, Kühl- und Klimaanlagen. Gefertigt aus Guss, Edelstahl und imprägniertem Metall.', brands: ['Grundfos', 'Wilo', 'IMP', 'HST'] },
+  { id: 'solarna-oprema', image: '/proizvodi/solarna.webp', nameSr: 'Solarna oprema', nameEn: 'Solar equipment', descSr: 'Vakumski i pločasti solarni kolektori — besplatna solarna energija omogućava uštedu do 60% energije za grejanje vode i 35% za grejanje prostora.', descEn: 'Vacuum and flat-plate solar collectors — free solar energy saves up to 60% on water heating and 35% on space heating.', nameDe: 'Solartechnik', descDe: 'Vakuum- und Flachkollektoren — kostenlose Solarenergie spart bis zu 60% Energie für die Warmwasserbereitung und 35% für die Raumheizung.', brands: ['Burnit', 'Centrometal'] },
+  { id: 'razdelnici-sabirnici', image: '/proizvodi/razdelnici.webp', nameSr: 'Razdelnici i sabirnici', nameEn: 'Manifolds & collectors', descSr: 'Mesingani, inox i plastični razdelnici za sisteme podnog grejanja. Čine jednostavan sistem za pojedinačne spojeve grejnih tela.', descEn: 'Brass, stainless and plastic manifolds for underfloor heating systems. A simple system for individual connections of heating bodies.', nameDe: 'Verteiler & Sammler', descDe: 'Messing-, Edelstahl- und Kunststoffverteiler für Fußbodenheizungssysteme. Ein einfaches System für die einzelnen Anschlüsse der Heizkörper.', brands: ['Tesa', 'Herz'] },
+  { id: 'ventili', image: '/proizvodi/ventili.webp', nameSr: 'Ventili', nameEn: 'Valves', descSr: 'Termostatski, vodovodne, gasni, nepovratni i mešni ventili za sve sisteme. Regulišu protok tečnosti i gasova delimičnim ili potpunim zatvaranjem.', descEn: 'Thermostatic, water, gas, non-return and mixing valves for all systems. They regulate the flow of liquids and gases by partial or full closure.', nameDe: 'Ventile', descDe: 'Thermostat-, Wasser-, Gas-, Rückschlag- und Mischventile für alle Systeme. Sie regeln den Durchfluss von Flüssigkeiten und Gasen durch teilweises oder vollständiges Schließen.', brands: ['Caleffi', 'Herz', 'Icma', 'Esbe'] },
 ];
 
 const PLUMBING: Category[] = [
-  { id: 'bojleri', image: '/img3.png', nameSr: 'Bojleri', nameEn: 'Water heaters', descSr: 'Električni i kombinovani bojleri za svako domaćinstvo i poslovni prostor. Kotao u kome se zagreva voda pod pritiskom za sanitarne potrebe.', descEn: 'Electric and combination water heaters for homes and commercial spaces. A tank where water is heated under pressure for sanitary use.', brands: ['Termorad', 'Ariston', 'Tesy'] },
-  { id: 'pvc-ppr', image: '/img4.png', nameSr: 'PVC i PPR cevi', nameEn: 'PVC & PPR pipes', descSr: 'Plastične cevi i fitinzi za vodovodne instalacije — lagane, hemijski otporne i jednostavne za montažu. Pogodne za zakopane i nadzemne instalacije.', descEn: 'Plastic pipes and fittings for plumbing — lightweight, chemically resistant and easy to install. Suitable for buried and above-ground applications.', brands: ['Valdom'] },
+  { id: 'bojleri', image: '/proizvodi/bojleri.webp', nameSr: 'Bojleri', nameEn: 'Water heaters', descSr: 'Električni i kombinovani bojleri za svako domaćinstvo i poslovni prostor. Kotao u kome se zagreva voda pod pritiskom za sanitarne potrebe.', descEn: 'Electric and combination water heaters for homes and commercial spaces. A tank where water is heated under pressure for sanitary use.', nameDe: 'Warmwasserspeicher', descDe: 'Elektrische und kombinierte Warmwasserspeicher für jeden Haushalt und Gewerberaum. Ein Behälter, in dem Wasser unter Druck für den sanitären Bedarf erhitzt wird.', brands: ['Termorad', 'Ariston', 'Tesy'] },
+  { id: 'pvc-ppr', image: '/proizvodi/pvc.webp', nameSr: 'PVC i PPR cevi', nameEn: 'PVC & PPR pipes', descSr: 'Plastične cevi i fitinzi za vodovodne instalacije — lagane, hemijski otporne i jednostavne za montažu. Pogodne za zakopane i nadzemne instalacije.', descEn: 'Plastic pipes and fittings for plumbing — lightweight, chemically resistant and easy to install. Suitable for buried and above-ground applications.', nameDe: 'PVC- & PPR-Rohre', descDe: 'Kunststoffrohre und Fittings für Wasserinstallationen — leicht, chemisch beständig und einfach zu montieren. Geeignet für Unterputz- und Aufputzinstallationen.', brands: ['Valdom'] },
 ];
 
 /* ── Animations ── */
@@ -67,6 +69,9 @@ export default function MaloprodajaGrid({ lang, heatingLabel, heatingTitle, plum
   const [active, setActive] = useState<Category | null>(null);
   const [mounted, setMounted] = useState(false);
   const isSr = lang === 'sr';
+  const isDe = lang === 'de';
+  const name = (c: Category) => (isSr ? c.nameSr : isDe ? c.nameDe : c.nameEn);
+  const desc = (c: Category) => (isSr ? c.descSr : isDe ? c.descDe : c.descEn);
 
   useEffect(() => { setMounted(true); }, []);
 
@@ -91,7 +96,7 @@ export default function MaloprodajaGrid({ lang, heatingLabel, heatingTitle, plum
       <div className={`relative overflow-hidden bg-neutral-100 ${isLarge ? 'aspect-[16/9]' : 'aspect-[16/10]'}`}>
         <Image
           src={cat.image}
-          alt={isSr ? cat.nameSr : cat.nameEn}
+          alt={name(cat)}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
@@ -99,7 +104,7 @@ export default function MaloprodajaGrid({ lang, heatingLabel, heatingTitle, plum
         {/* Hover overlay hint */}
         <div className="absolute inset-0 flex items-end justify-end p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <span className="flex items-center gap-1.5 rounded-full bg-orange-500 px-3 py-1.5 text-[11px] font-semibold text-white shadow-lg">
-            {isSr ? 'Saznaj više' : 'Learn more'}
+            {isSr ? 'Saznaj više' : isDe ? 'Mehr erfahren' : 'Learn more'}
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3">
               <path d="M3 8h10M9 4l4 4-4 4" />
             </svg>
@@ -109,10 +114,10 @@ export default function MaloprodajaGrid({ lang, heatingLabel, heatingTitle, plum
 
       <div className="flex flex-1 flex-col gap-3 p-5">
         <h3 className="text-[15px] font-bold leading-snug tracking-tight text-neutral-900 transition-colors group-hover:text-orange-600">
-          {isSr ? cat.nameSr : cat.nameEn}
+          {name(cat)}
         </h3>
         <p className="flex-1 text-[12px] leading-relaxed text-neutral-500">
-          {isSr ? cat.descSr : cat.descEn}
+          {desc(cat)}
         </p>
         <div className="border-t border-neutral-100 pt-3">
           <p className="mb-2 text-[10px] font-semibold uppercase tracking-widest text-neutral-400">{brandsLabel}</p>
@@ -160,7 +165,7 @@ export default function MaloprodajaGrid({ lang, heatingLabel, heatingTitle, plum
               <div className="relative aspect-[16/8] overflow-hidden bg-neutral-100">
                 <Image
                   src={active.image}
-                  alt={isSr ? active.nameSr : active.nameEn}
+                  alt={name(active)}
                   fill
                   sizes="(max-width: 768px) 100vw, 672px"
                   className="object-cover"
@@ -170,7 +175,7 @@ export default function MaloprodajaGrid({ lang, heatingLabel, heatingTitle, plum
                 {/* Title overlay */}
                 <div className="absolute bottom-0 left-0 p-6">
                   <h2 className="text-[24px] font-black tracking-tight text-white drop-shadow-lg md:text-[28px]">
-                    {isSr ? active.nameSr : active.nameEn}
+                    {name(active)}
                   </h2>
                 </div>
               </div>
@@ -181,7 +186,7 @@ export default function MaloprodajaGrid({ lang, heatingLabel, heatingTitle, plum
                 <div className="mb-4 h-[2px] w-10 rounded-full bg-gradient-to-r from-orange-500 to-red-600" />
 
                 <p className="text-[14px] leading-relaxed text-neutral-600">
-                  {isSr ? active.descSr : active.descEn}
+                  {desc(active)}
                 </p>
 
                 {/* Brands */}
@@ -203,14 +208,14 @@ export default function MaloprodajaGrid({ lang, heatingLabel, heatingTitle, plum
                     onClick={() => setActive(null)}
                     className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600 px-6 py-3 text-[13px] font-bold text-white transition-opacity hover:opacity-90"
                   >
-                    {isSr ? 'Kontaktirajte nas' : 'Contact us'}
+                    {isSr ? 'Kontaktirajte nas' : isDe ? 'Kontaktieren Sie uns' : 'Contact us'}
                   </Link>
                   <button
                     type="button"
                     onClick={() => setActive(null)}
                     className="rounded-full border border-neutral-200 px-6 py-3 text-[13px] font-semibold text-neutral-600 transition-colors hover:bg-neutral-50"
                   >
-                    {isSr ? 'Zatvori' : 'Close'}
+                    {isSr ? 'Zatvori' : isDe ? 'Schließen' : 'Close'}
                   </button>
                 </div>
               </div>

@@ -26,9 +26,9 @@ export default function AboutContent({ lang }: { lang: Locale }) {
             {/* Key fact strip */}
             <div className="mt-10 flex flex-wrap gap-6">
               {[
-                { value: '1992', label: lang === 'sr' ? 'Godina osnivanja' : 'Year founded' },
-                { value: '2001', label: lang === 'sr' ? 'Početak proizvodnje' : 'Production start' },
-                { value: '6 000 m²', label: lang === 'sr' ? 'Površina pogona' : 'Facility area' },
+                { value: '1992', label: lang === 'sr' ? 'Godina osnivanja' : lang === 'de' ? 'Gründungsjahr' : 'Year founded' },
+                { value: '2001', label: lang === 'sr' ? 'Početak proizvodnje' : lang === 'de' ? 'Produktionsbeginn' : 'Production start' },
+                { value: '6 000 m²', label: lang === 'sr' ? 'Površina pogona' : lang === 'de' ? 'Werksfläche' : 'Facility area' },
               ].map((item) => (
                 <div key={item.value} className="flex flex-col">
                   <span className="bg-linear-to-r from-orange-500 to-red-600 bg-clip-text text-[32px] font-extrabold leading-none tracking-[-0.03em] text-transparent">
@@ -44,7 +44,7 @@ export default function AboutContent({ lang }: { lang: Locale }) {
           <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl">
             <Image
               src="https://www.nesa-komerc.com/wp-content/uploads/elementor/thumbs/KOC1710_result-pojtzye5su11mcbl0f5g4o7t0gzlurlzfgeofk1ixs.jpg"
-              alt={lang === 'sr' ? 'Neša Komerc pogon' : 'Neša Komerc facility'}
+              alt={lang === 'sr' ? 'Neša Komerc pogon' : lang === 'de' ? 'Neša Komerc Werk' : 'Neša Komerc facility'}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

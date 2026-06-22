@@ -10,24 +10,24 @@ import Image from 'next/image';
 const CATALOGS = [
   {
     id: 'sr-en',
-    name: 'Neša Komerc',
-    description: 'Katalog na srpskom i engleskom',
+    name: { sr: 'Neša Komerc', en: 'Neša Komerc', de: 'Neša Komerc' },
+    description: { sr: 'Katalog na srpskom i engleskom', en: 'Catalogue in Serbian and English', de: 'Katalog auf Serbisch und Englisch' },
     image: '/katalozi/katalog-na-srpskom-thumbnail.png',
     href: '/katalozi/Nesa-Komerc-katalog-A4-srp-eng.pdf',
     preview: '/katalozi/Nesa-Komerc-katalog-A4-srp-eng.pdf',
   },
   {
     id: 'de',
-    name: 'Neša Komerc',
-    description: 'Katalog na nemačkom',
+    name: { sr: 'Neša Komerc', en: 'Neša Komerc', de: 'Neša Komerc' },
+    description: { sr: 'Katalog na nemačkom', en: 'Catalogue in German', de: 'Katalog auf Deutsch' },
     image: '/katalozi/katalog-na-srpskom-thumbnail.png',
     href: '/katalozi/Nesa-Komerc-katalog-A4-nem.pdf',
     preview: '/katalozi/Nesa-Komerc-katalog-A4-nem.pdf',
   },
   {
     id: 'quality',
-    name: 'Politika kvaliteta',
-    description: 'Preuzmite PDF',
+    name: { sr: 'Politika kvaliteta', en: 'Quality Policy', de: 'Qualitätspolitik' },
+    description: { sr: 'Preuzmite PDF', en: 'Download PDF', de: 'PDF herunterladen' },
     image: '/katalozi/katalog-na-srpskom-thumbnail.png',
     href: '/katalozi/Politika-kvaliteta.pdf',
     preview: '/katalozi/Politika-kvaliteta.pdf',
@@ -82,6 +82,8 @@ export default function CatalogsModal({ lang, trigger }: CatalogsModalProps) {
     return () => document.removeEventListener('keydown', onKey);
   }, [activeCatalog]);
 
+  const tx = (v: { sr: string; en: string; de: string }) => v[lang] ?? v.en;
+
   const handleClose = () => { setIsOpen(false); setActiveCatalog(null); };
 
   const handleCatalogClick = (cat: typeof CATALOGS[0]) => {
@@ -97,7 +99,7 @@ export default function CatalogsModal({ lang, trigger }: CatalogsModalProps) {
         <div className="flex items-center gap-2.5">
           <FileText className="h-5 w-5 text-orange-500" />
           <span className="text-[15px] font-bold text-neutral-900">
-            {lang === 'sr' ? 'Katalozi proizvoda' : 'Product Catalogues'}
+            {lang === 'sr' ? 'Katalozi proizvoda' : lang === 'de' ? 'Produktkataloge' : 'Product Catalogues'}
           </span>
         </div>
         <motion.button
@@ -133,7 +135,7 @@ export default function CatalogsModal({ lang, trigger }: CatalogsModalProps) {
                 <div className="shrink-0 overflow-hidden rounded-lg border border-neutral-100">
                   <Image
                     src={cat.image}
-                    alt={cat.name}
+                    alt={tx(cat.name)}
                     width={72}
                     height={94}
                     style={{ width: '72px', height: 'auto', display: 'block' }}
@@ -142,9 +144,9 @@ export default function CatalogsModal({ lang, trigger }: CatalogsModalProps) {
                 </div>
                 <div className="flex flex-1 flex-col gap-0.5 min-w-0">
                   <span className={`text-[14px] font-bold transition-colors ${activeCatalog?.id === cat.id ? 'text-orange-600' : 'text-neutral-900 group-hover:text-orange-600'}`}>
-                    {cat.name}
+                    {tx(cat.name)}
                   </span>
-                  <span className="text-[12px] text-neutral-500 leading-snug">{cat.description}</span>
+                  <span className="text-[12px] text-neutral-500 leading-snug">{tx(cat.description)}</span>
                   <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wider text-neutral-400">PDF</span>
                 </div>
                 <a
@@ -178,17 +180,17 @@ export default function CatalogsModal({ lang, trigger }: CatalogsModalProps) {
           className="flex items-center gap-1.5 text-[13px] font-medium text-neutral-500 transition-colors hover:text-neutral-900"
         >
           <ChevronLeft className="h-4 w-4" />
-          {lang === 'sr' ? 'Nazad' : 'Back'}
+          {lang === 'sr' ? 'Nazad' : lang === 'de' ? 'Zurück' : 'Back'}
         </button>
         <div className="flex items-center gap-2">
-          <span className="text-[13px] font-semibold text-neutral-700">{activeCatalog.name}</span>
+          <span className="text-[13px] font-semibold text-neutral-700">{tx(activeCatalog.name)}</span>
           <a
             href={activeCatalog.href}
             download
             className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 px-4 py-1.5 text-[12px] font-semibold text-white transition-opacity hover:opacity-90"
           >
             <Download className="h-3.5 w-3.5" />
-            {lang === 'sr' ? 'Preuzmi' : 'Download'}
+            {lang === 'sr' ? 'Preuzmi' : lang === 'de' ? 'Herunterladen' : 'Download'}
           </a>
         </div>
       </div>
@@ -198,7 +200,7 @@ export default function CatalogsModal({ lang, trigger }: CatalogsModalProps) {
         src={`${activeCatalog.preview}#toolbar=0&navpanes=0`}
         className="flex-1 w-full"
         style={{ border: 'none', minHeight: isMobile ? '60vh' : '820px' }}
-        title={activeCatalog.name}
+        title={tx(activeCatalog.name)}
       />
     </div>
   );
@@ -249,7 +251,7 @@ export default function CatalogsModal({ lang, trigger }: CatalogsModalProps) {
                           className="flex items-center gap-1.5 text-[13px] font-medium text-neutral-500 transition-colors hover:text-neutral-900"
                         >
                           <ChevronLeft className="h-4 w-4" />
-                          {lang === 'sr' ? 'Nazad' : 'Back'}
+                          {lang === 'sr' ? 'Nazad' : lang === 'de' ? 'Zurück' : 'Back'}
                         </button>
                         <div className="flex items-center gap-2">
                           <a
@@ -258,7 +260,7 @@ export default function CatalogsModal({ lang, trigger }: CatalogsModalProps) {
                             className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 px-4 py-1.5 text-[12px] font-semibold text-white"
                           >
                             <Download className="h-3.5 w-3.5" />
-                            {lang === 'sr' ? 'Preuzmi' : 'Download'}
+                            {lang === 'sr' ? 'Preuzmi' : lang === 'de' ? 'Herunterladen' : 'Download'}
                           </a>
                           <button
                             type="button"
@@ -273,7 +275,7 @@ export default function CatalogsModal({ lang, trigger }: CatalogsModalProps) {
                         src={`${activeCatalog.preview}#toolbar=0&navpanes=0`}
                         className="flex-1 w-full"
                         style={{ border: 'none' }}
-                        title={activeCatalog.name}
+                        title={tx(activeCatalog.name)}
                       />
                     </motion.div>
                   ) : (

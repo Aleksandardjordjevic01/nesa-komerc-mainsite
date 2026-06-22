@@ -38,7 +38,7 @@ export default function RetailSection({ lang }: { lang: Locale }) {
               <>
                 <span className="text-lg font-semibold text-white">{cat.name}</span>
                 <span className="mt-auto flex items-center gap-1.5 text-xs font-medium text-white/30 transition-colors duration-300 group-hover:text-white/70">
-                  {lang === 'sr' ? 'Pogledaj asortiman' : 'View range'}
+                  {lang === 'sr' ? 'Pogledaj asortiman' : lang === 'de' ? 'Sortiment ansehen' : 'View range'}
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                   </svg>

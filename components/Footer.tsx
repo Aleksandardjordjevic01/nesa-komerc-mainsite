@@ -46,7 +46,7 @@ export default function Footer({ lang }: { lang: Locale }) {
 
           <div className="flex flex-col gap-3 sm:items-end">
             <p className="text-xs font-semibold uppercase tracking-widest text-neutral-600">
-              {lang === 'sr' ? 'Pratite nas' : 'Follow us'}
+              {lang === 'sr' ? 'Pratite nas' : lang === 'de' ? 'Folgen Sie uns' : 'Follow us'}
             </p>
             <div className="flex items-center gap-2">
               {/* Facebook */}

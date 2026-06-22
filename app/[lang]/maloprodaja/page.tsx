@@ -8,6 +8,7 @@ export default async function MaloprodajaPage({ params }: { params: Promise<{ la
   const { lang } = (await params) as { lang: Locale };
   const t = (translations[lang] ?? translations['sr']).maloprodajaPage;
   const isSr = lang === 'sr';
+  const isDe = lang === 'de';
 
   return (
     <>
@@ -37,24 +38,26 @@ export default async function MaloprodajaPage({ params }: { params: Promise<{ la
           <div className="grid items-center gap-12 lg:grid-cols-[3fr_2fr]">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-widest text-orange-500">
-                {isSr ? 'Naš salon' : 'Our showroom'}
+                {isSr ? 'Naš salon' : isDe ? 'Unser Showroom' : 'Our showroom'}
               </span>
               <h2 className="mt-3 text-[32px] font-black tracking-tight text-white md:text-[42px]">
-                {isSr ? 'Sve na jednom mestu u Svilajncu' : 'Everything in one place in Svilajnac'}
+                {isSr ? 'Sve na jednom mestu u Svilajncu' : isDe ? 'Alles an einem Ort in Svilajnac' : 'Everything in one place in Svilajnac'}
               </h2>
               <p className="mt-4 text-[15px] leading-relaxed text-neutral-400">
                 {isSr
                   ? 'U našem maloprodajnom objektu možete pronaći kompletnu prateću opremu i materijal za vodovod i grejanje. Raspolažemo i modernom automatikom za grejanje koja vam omogućava da upravljate sistemom sa bilo koje lokacije.'
+                  : isDe
+                  ? 'In unserem Einzelhandelsgeschäft finden Sie das komplette Zubehör und Material für Sanitär und Heizung. Wir verfügen außerdem über moderne Heizungsautomatik, mit der Sie Ihr System von jedem Ort aus steuern können.'
                   : 'Our retail store carries a complete range of plumbing and heating materials and accessories. We also stock modern heating automation that lets you manage your system from any location.'}
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { value: '14+', label: isSr ? 'Kategorija proizvoda' : 'Product categories' },
-                { value: '30+', label: isSr ? 'Brendova u ponudi' : 'Brands in stock' },
-                { value: '07–15', label: isSr ? 'Radno vreme' : 'Working hours' },
-                { value: '1994', label: isSr ? 'Godina osnivanja' : 'Est. year' },
+                { value: '14+', label: isSr ? 'Kategorija proizvoda' : isDe ? 'Produktkategorien' : 'Product categories' },
+                { value: '30+', label: isSr ? 'Brendova u ponudi' : isDe ? 'Marken im Angebot' : 'Brands in stock' },
+                { value: '07–15', label: isSr ? 'Radno vreme' : isDe ? 'Öffnungszeiten' : 'Working hours' },
+                { value: '1994', label: isSr ? 'Godina osnivanja' : isDe ? 'Gründungsjahr' : 'Est. year' },
               ].map((s) => (
                 <div key={s.label} className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
                   <p className="text-[28px] font-black text-white">{s.value}</p>

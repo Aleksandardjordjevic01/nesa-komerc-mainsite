@@ -1,4 +1,4 @@
-export const locales = ["sr", "en"] as const;
+export const locales = ["sr", "en", "de"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "sr";
 
@@ -425,7 +425,7 @@ export const translations = {
           name: "NK TERM 22",
           tag: "Novo",
           description: "Izrađen od čeličnih šavnih cevi (Č 0146), materijala DC01 po EN 10305-3/5, \"D\" profila 30×40 mm i rebara od okruglih cevi Ø22 mm.",
-          image: "/nx-term.png",
+          image: "/proizvodi/nkterm.png",
           href: "/sr/proizvodi/nk-term",
         },
         {
@@ -433,7 +433,7 @@ export const translations = {
           name: "NK STANDARD",
           tag: "Bestseller",
           description: "Radijator \"NK STANDARD\" je cevasti radijator koji svojom veličinom i dizajnom zauzima very malo prostora. Idealan za kupatila i sve stambene prostore.",
-          image: "/nx-standard.png",
+          image: "/proizvodi/nkstandard.png",
           href: "/sr/proizvodi/nk-standard",
         },
         {
@@ -441,7 +441,7 @@ export const translations = {
           name: "Srednji priključak",
           tag: "Oprema",
           description: "Srednji priključak na cevastom radijatoru služi za povezivanje na cev ili pod, iz zida, a i za kombinaciju grejanja radijatorima i podnog grejanja.",
-          image: "/img4.png",
+          image: "/proizvodi/prikljucak.png",
           href: "/sr/proizvodi/nk-standard",
         },
         {
@@ -449,7 +449,7 @@ export const translations = {
           name: "Sa grejačem",
           tag: "Opcija",
           description: "U ponudi imamo i sušače sa mogućnošću ugradnje elektičnog grejača, putem kombinovane vode i termofluom. Jačina grejača zavisi od dimenzija i jedne zadatke.",
-          image: "/img2.png",
+          image: "/proizvodi/sagrejacem.png",
           href: "/sr/proizvodi/nk-lux",
         },
         {
@@ -1021,6 +1021,517 @@ export const translations = {
           { title: "SRPS ISO 9001:2015", body: "Quality management system governing all internal processes from procurement to delivery." },
           { title: "SR EN 442-3:2014", body: "European standard for tubular radiators confirming technical characteristics and safety." },
           { title: "Faculty of Mechanical Engineering report", body: "Independent testing of thermal and mechanical characteristics by an accredited institution." },
+        ],
+      },
+    },
+  },
+  de: {
+    hero: {
+      headline1: "Wärme, die Ihren Raum",
+      headline2: "verschönert",
+      cta: "Produkte ansehen",
+      about: "Über uns",
+    },
+    aboutMap: {
+      items: [
+        {
+          label: "30 Jahre Erfahrung",
+          text: "Stolz auf unseren hohen Standard garantieren wir die Funktionalität und Langlebigkeit jedes Produkts.",
+        },
+        {
+          label: "Qualitätskontrolle",
+          text: "Durch eigene Qualitätsmanagementprozesse sichert unser Expertenteam gleichbleibende Spitzenqualität.",
+        },
+        {
+          label: "Regionaler Marktführer",
+          text: "Wir verfolgen kontinuierlich die Entwicklungen moderner Technologien auf dem globalen Markt.",
+        },
+        {
+          label: "Eigene Fertigung",
+          text: "Der gesamte Produktionsprozess findet in unseren Anlagen statt, was uns volle Kontrolle über die Qualität gibt.",
+        },
+      ],
+    },
+    highlights: {
+      items: [
+        {
+          category: "Erfahrung",
+          stat: "+30",
+          subtitle: "Jahre Erfahrung",
+          description:
+            "Seit 1994 bauen wir Partnerschaften auf Basis von Qualität. Jeder Heizkörper, der unser Werk verlässt, trägt eine Garantie für Leistung und Langlebigkeit.",
+        },
+        {
+          category: "Qualität",
+          stat: "100%",
+          subtitle: "Qualitätskontrolle",
+          description:
+            "Jedes Produkt durchläuft vor der Auslieferung eine mehrstufige Prüfung. Unsere internen Qualitätsmanagementprozesse stellen sicher, dass der Standard nie unter das höchste Niveau fällt.",
+        },
+        {
+          category: "Distribution",
+          stat: "7+",
+          subtitle: "Länder in der Region",
+          description:
+            "Unsere Produkte sind auf den Märkten des gesamten Balkans präsent. Wir verfolgen globale Technologietrends und wenden sie im lokalen Kontext an.",
+        },
+      ],
+    },
+    nav: {
+      home: "Startseite",
+      production: "Produktion",
+      products: "Produkte",
+      retail: "Einzelhandel",
+      salesNetwork: "Vertriebsnetz",
+      about: "Über uns",
+      contact: "Kontakt",
+      catalogues: "Kataloge",
+    },
+    aboutSection: {
+      pill: "Unser Unternehmen",
+      headlinePre: "Wir produzieren",
+      headlineAccent: "WÄRME",
+      body1:
+        "In jahrzehntelanger Arbeit haben wir ein Unternehmen aufgebaut, das der führende Hersteller von Heizelementen in Südost- und Mitteleuropa ist. Unser Ruf und unsere Tradition verpflichten uns, den Weg zur Erreichung unserer Ziele fortzusetzen.",
+      body2:
+        "Das Wissen und die Erfahrung unserer Mitarbeiter, moderne Produktionstechnologie und verbesserte Fertigungsprozesse ermöglichen es uns, Produkte mit einem unverkennbaren Qualitätsstandard zu liefern.",
+      tagline: "Bei uns ist es immer warm.",
+      stats: [
+        { value: "1994", label: "Gegründet" },
+        { value: "Trstenik", label: "Hauptsitz" },
+        { value: "+30", label: "Jahre Erfahrung" },
+        { value: "7+", label: "Länder in der Region" },
+      ],
+    },
+    retail: {
+      label: "Einzelhandel",
+      title: "Alles für Sanitär & Heizung an einem Ort",
+      body: "Unser Einzelhandelsgeschäft führt ein komplettes Sortiment an Zubehör und Materialien für Sanitär- und Heizungssysteme. Wir führen außerdem moderne Heizungsautomatik, mit der Sie Ihre Heizung von jedem entfernten Ort aus steuern können.",
+      cta: "Unser Geschäft besuchen",
+      categories: [
+        { name: "Sanitärmaterial", href: null },
+        { name: "Heizungsausstattung", href: null },
+        { name: "Badausstattung", href: "https://nesakomerckeramika.com/" },
+      ],
+    },
+    partners: {
+      label: "Partner",
+      title: "Unser Vertriebsnetz",
+    },
+    footer: {
+      tagline: "Wo Wärme auf Qualität trifft.",
+      colNav: "Navigation",
+      colContact: "Kontakt",
+      colLegal: "Unternehmen",
+      phone: "+381 35 8814 077",
+      email: "office@nesa-komerc.com",
+      address: "Svilajnac, Serbien",
+      pib: "USt-IdNr.: 101234567",
+      mb: "Reg.-Nr.: 07654321",
+      copyright: "© 2026 Neša Komerc d.o.o. Alle Rechte vorbehalten.",
+      links: {
+        privacy: "Datenschutz",
+        terms: "Nutzungsbedingungen",
+      },
+    },
+    testimonials: {
+      items: [
+        {
+          quote:
+            "Die Qualität der Neša-Komerc-Heizkörper hat unsere Erwartungen übertroffen.",
+          body: "Wir haben sie in mehreren Gebäuden installiert und hatten in drei Jahren keine einzige Beanstandung. Sehr zu empfehlen.",
+          name: "Marko Petrović",
+          role: "Geschäftsführer, Petrović Construction",
+        },
+        {
+          quote: "Eine Partnerschaft, die seit sieben Jahren besteht.",
+          body: "Zuverlässige Lieferzeiten und gleichbleibende Produktqualität machen sie zum idealen Partner für all unsere Projekte.",
+          name: "Jelena Nikolić",
+          role: "Architektin, Studio N",
+        },
+        {
+          quote: "Heizkörper, die perfekt aussehen und funktionieren.",
+          body: "Kunden fragen regelmäßig, welche Marke das ist — das Design passt in jedes Interieur und die Heizleistung ist tadellos.",
+          name: "Stefan Jovanović",
+          role: "Inhaber, Sanus Interiors",
+        },
+      ],
+    },
+    carousel: {
+      slides: [
+        {
+          title: "NK LUX",
+          description:
+            "Ein Premium-Heizkörper für alle, die mehr erwarten — feine Linien, hohe Heizleistung und bleibende Eleganz in jedem Raum.",
+          cta: "Produkt ansehen",
+          href: "/de/products/nk-lux",
+        },
+        {
+          title: "NK TERM 22",
+          description:
+            'Aus geschweißten Stahlrohren (Č 0146, DC01 nach EN 10305-3 / EN 10305-5) mit 30×40 mm „D"-Profilen und Ø22 mm Rundrohr-Lamellen. Heizmedium ist Warmwasser; Wärmeübertragung durch Konvektion und Strahlung. Vier ½″-Anschlüsse.',
+          cta: "Produkt ansehen",
+          href: "/de/products/nk-term",
+        },
+        {
+          title: "NK STANDARD",
+          description:
+            "Ein Röhrenheizkörper mit kompaktem Grundriss, vorrangig für die Badheizung konzipiert, aber ebenso zu Hause in Wohnzimmern, Kinderzimmern, Küchen und Büros.",
+          cta: "Produkt ansehen",
+          href: "/de/products/nk-standard",
+        },
+      ],
+    },
+    advantages: {
+      pill: "Unsere Stärken",
+      title: "Unabhängige Heizkörperfertigung",
+      lead: "Als Auftragsfertiger produzieren wir Heizkörper in einer Vielzahl von Abmessungen und Farben, passend für jeden Kunden. Auf Wunsch kann ein zusätzlicher Elektroheizstab eingebaut werden.",
+      beforeLabel: "Herausforderung",
+      afterLabel: "Lösung",
+      items: [
+        {
+          category: "Anpassung",
+          title: "Maßgeschneiderte Abmessungen & Farben",
+          before:
+            "Standardabmessungen passen nicht in den Raum und erfordern kostspielige Anpassungen.",
+          after:
+            "Heizkörper nach Ihren genauen Maßen, in jeder Farbe der RAL-Palette erhältlich.",
+          metaKey: "Palette",
+          metaValue: "RAL-Standard",
+          highlight: "Auf Bestellung gefertigt",
+        },
+        {
+          category: "Prozess",
+          title: "Kompletter Produktionsprozess",
+          before:
+            "Abhängigkeit von externen Lieferanten und unkontrollierten Lieferketten.",
+          after:
+            "Gesamte Produktion vom Rohmaterial bis zum fertigen Heizkörper im eigenen Werk.",
+          metaKey: "Standort",
+          metaValue: "Svilajnac",
+        },
+        {
+          category: "Innovation",
+          title: "Geschütztes Patent",
+          before:
+            "Kopierte Lösungen ohne Garantie für Originaldesign oder optimale Effizienz.",
+          after:
+            "Innovatives, patentgeschütztes Design für optimale Wärmeübertragung.",
+          metaKey: "Status",
+          metaValue: "Patentiert",
+          highlight: "Originaldesign",
+        },
+        {
+          category: "Technik",
+          title: "Leistungsbereich 500–2000 W",
+          before: "Begrenzter Leistungsbereich, der nicht alle Raumtypen abdeckt.",
+          after:
+            "Breiter Leistungsbereich, geeignet für Bäder, Wohnzimmer und Büros gleichermaßen.",
+          metaKey: "Leistungsbereich",
+          metaValue: "500 – 2000 W",
+          highlight: "Jede Raumgröße",
+        },
+        {
+          category: "Montage",
+          title: "Sehr einfache Montage",
+          before:
+            "Komplexe Installation, die Fachhandwerker und Spezialwerkzeug erfordert.",
+          after:
+            "Standardisierte Anschlüsse und beiliegende Anleitung — schnelle, werkzeuglose Montage.",
+          metaKey: "Anschlüsse",
+          metaValue: '4 × 1/2"',
+          highlight: "Kein Spezialwerkzeug",
+        },
+        {
+          category: "Qualität",
+          title: "Premium-Qualität",
+          before:
+            "Unkontrollierte Prozesse, hohe Reklamationsraten und ungewisse Langlebigkeit.",
+          after:
+            "Mehrstufige Prüfung von der Maßkontrolle bis zum Drucktest vor jedem Versand.",
+          metaKey: "Reklamationen",
+          metaValue: "< 1%",
+          highlight: "Langlebigkeit garantiert",
+        },
+        {
+          category: "Zertifizierungen",
+          title: "Zertifizierte Produkte",
+          before:
+            "Nichteinhaltung der EU-Normen behindert den Export und mindert das Vertrauen der Käufer.",
+          after:
+            "Alle relevanten europäischen Zertifizierungen — voller Zugang zum EU-Markt.",
+          metaKey: "Märkte",
+          metaValue: "7+ Länder",
+          highlight: "EU-zertifiziert",
+        },
+        {
+          category: "Logistik",
+          title: "Fortschrittlicher Vertrieb & Logistik",
+          before:
+            "Lange Lieferzeiten, schlechte Kommunikation und keine Auftragsverfolgung.",
+          after:
+            "Schnelle Lieferung, transparente Verfolgung und ein engagiertes Vertriebsteam für jeden Auftrag.",
+          metaKey: "Support",
+          metaValue: "Jeden Werktag",
+          highlight: "Schnelle Lieferung",
+        },
+        {
+          category: "Umwelt",
+          title: "Ökologische Verantwortung",
+          before:
+            "Unkontrollierte Umweltverschmutzung und Ressourcenverschwendung in der Fertigung.",
+          after:
+            "Umweltbewusste Prozesse und Materialien, die unseren Fußabdruck minimieren.",
+          metaKey: "Standard",
+          metaValue: "ISO 14001",
+          highlight: "Grüne Produktion",
+        },
+      ],
+    },
+    notfound: {
+      title: "Seite nicht gefunden",
+      body: "Die gesuchte Seite existiert nicht oder wurde verschoben. Überprüfen Sie die Adresse oder kehren Sie zur Startseite zurück.",
+      prim: "Startseite",
+      sec: "Kontaktieren Sie uns",
+    },
+    aboutHero: {
+      badge: "Über uns",
+      title: "Jede Wärme beginnt hier",
+      subtitle:
+        "Seit 1994 bauen wir Partnerschaften auf Basis von Qualität, Tradition und Hingabe an jeden Kunden.",
+    },
+    contactPage: {
+      hero: {
+        badge: "Kontakt",
+        title: "Nehmen Sie Kontakt auf",
+        subtitle: "Wir sind für all Ihre Fragen, Angebote und Partnerschaften da. Wir antworten so schnell wie möglich.",
+      },
+      info: {
+        badge: "Kontaktinformationen",
+        addressLabel: "Adresse",
+        address: "Stevana Sinđelića 30\n35210 Svilajnac, Serbien",
+        phoneLabel: "Telefon",
+        emailLabel: "E-Mail",
+        phones: ["+381 35 8814 077", "+381 35 8814 099"],
+        emails: [
+          "office@nesa-komerc.com",
+          "sales@nesa-komerc.com",
+          "teodora.obradovic@nesa-komerc.com",
+        ],
+      },
+      form: {
+        badge: "Nachricht senden",
+        title: "Wie können wir helfen?",
+        labelName: "Vollständiger Name",
+        labelCompany: "Unternehmen",
+        labelPhone: "Telefon",
+        labelEmail: "E-Mail-Adresse",
+        labelDepartment: "Abteilung",
+        labelMessage: "Nachricht",
+        placeholderName: "Ihr vollständiger Name",
+        placeholderCompany: "Firmenname",
+        placeholderPhone: "+381...",
+        placeholderEmail: "ihre@email.com",
+        placeholderMessage: "Beschreiben Sie Ihr Anliegen...",
+        submit: "Nachricht senden",
+        successTitle: "Nachricht gesendet!",
+        successBody: "Vielen Dank für Ihre Nachricht. Wir melden uns so schnell wie möglich bei Ihnen.",
+        departments: [
+          { value: "wholesale", label: "Großhandel" },
+          { value: "retail", label: "Einzelhandel" },
+          { value: "production", label: "Produktion" },
+          { value: "director", label: "Geschäftsführung" },
+          { value: "accounting", label: "Buchhaltung" },
+        ],
+      },
+      mapLabel: "So finden Sie uns",
+    },
+    aboutPage: {
+      company: {
+        badge: "Neša Komerc d.o.o.",
+        title: "Gründung & Wachstum",
+        body1:
+          'Neša Komerc d.o.o. wurde im Dezember 1992 gegründet und begann 2001 mit der Fertigung von Röhrenheizkörpern. Durch stetigen Fortschritt und kontinuierliche Investitionen in neue Technologien hat sich das Unternehmen zu einem ernstzunehmenden Industriebetrieb entwickelt.',
+        body2:
+          'Das Unternehmen hat seinen Sitz in Svilajnac, in der Industriezone an der Straße nach Požarevac, 110 km von Belgrad entfernt. Heute findet die Produktion in modernen Industriehallen auf 6.000 m² statt. Im Fertigungsprozess kommen modernste Anlagen renommierter Welthersteller (Roboter- und Tunnelschweißen) sowie Rohstoffe der angesehensten europäischen Unternehmen zum Einsatz, untermauert von einer effizienten Organisation, die durch die entsprechenden Zertifikate bestätigt wird.',
+      },
+      mission: {
+        badge: "Mission & Vision",
+        title: "Qualität und Kunden verpflichtet",
+        body1:
+          'Unser Unternehmen ist den Bedürfnissen seiner Kunden und der Qualität seiner Produkte voll verpflichtet, die mit einer fünfjährigen Garantie geliefert werden. Die Röhrenheizkörper sind von herausragender Qualität mit einzigartigem Design und verfügen über alle erforderlichen Atteste und Zertifikate.',
+        body2:
+          'Neša Komerc d.o.o. ist und bleibt ein unabhängiges Familienunternehmen, das darauf ausgerichtet ist, seine führende Position zu stärken und neue Märkte zu erschließen.',
+        guarantee: "5 Jahre Garantie",
+      },
+      team: {
+        badge: "Unser Team",
+        title: "Die Menschen hinter jeder Wärme",
+        subtitle: "Das Expertenteam hinter jedem Heizkörper, der unser Werk verlässt.",
+        members: [
+          { name: "Nenad Ognjanović", role: "Finanzdirektor – Inhaber", email: "office@nesa-komerc.com", phone: "035 8814 077", photo: "/team/team-01.jpg" },
+          { name: "Jasna Ognjanović", role: "Kaufmännische Direktorin", email: "ognjanovjasna71@gmail.com", phone: "062-320-076", photo: "/team/team-02.jpg" },
+          { name: "Miroljub Ognjanović", role: "Generaldirektor", email: "office@nesa-komerc.com", phone: "035 8814 077", photo: "/team/team-03.jpg" },
+          { name: "Teodora Obradović", role: "Vertriebsmitarbeiterin – Inland & Ausland", email: "teodora.obradovic@nesa-komerc.com", phone: "063-10-27-316", photo: "/team/team-04.jpg" },
+          { name: "Nikolina Prlić", role: "Finanzsachbearbeiterin", email: "knjigovodstvo@nesa-komerc.com", phone: "063-10-27-324", photo: "/team/team-05.png" },
+          { name: "Marija Radosavljević", role: "Buchhalterin", email: "knjigovodstvo1@nesa-komerc.com", phone: "063-10-27-955", photo: "/team/team-06.jpg" },
+          { name: "Ivana Rajčić", role: "Leiterin Einzelhandel", email: "maloprodaja@nesa-komerc.com", phone: "063-10-27-319", photo: "/team/team-07.jpg" },
+          { name: "Nataša Milošević", role: "Leiterin Großhandel", email: "natasa.milosevic@nesa-komerc.com", phone: "063-10-67-444", photo: "/team/team-08.jpg" },
+          { name: "Srđan Korunović", role: "Leiter Großhandel – Lager", email: "veleprodaja@nesa-komerc.com", phone: "063-10-27-396", photo: "/team/team-09.jpg" },
+          { name: "Dalibor Nedeljković", role: "Produktionsleiter – Ingenieur", email: "dalibor.nedeljkovic@nesa-komerc.com", phone: "063-10-27-356", photo: "/team/team-10.png" },
+          { name: "Ivan Luković", role: "Produktionsleiter – QMS – Qualität", email: "ivan.lukovic@nesa-komerc.com", phone: "063-10-27-358", photo: "/team/team-11.jpg" },
+          { name: "Nenad Jovanović", role: "Leiter Einzelhandel", email: "maloprodaja@nesa-komerc.com", phone: "063-10-27-362", photo: "/team/team-12.jpg" },
+        ],
+      },
+    },
+    salesNetworkPage: {
+      hero: {
+        badge: "Vertriebsnetz",
+        title: "Autorisierte Neša-Komerc-Vertriebspartner",
+        subtitle: "Finden Sie einen autorisierten Neša-Komerc-Partner in Ihrer Stadt.",
+      },
+      filterAll: "Alle Städte",
+      mapLabel: "Karte des Vertriebsnetzes",
+      partnersLabel: "Unsere Partner",
+      phoneLabel: "Telefon",
+      emailLabel: "E-Mail",
+      addressLabel: "Adresse",
+      branchesLabel: "Filialen",
+      noResults: "Keine Partner für die ausgewählte Stadt gefunden.",
+    },
+    maloprodajaPage: {
+      hero: {
+        badge: "Einzelhandel",
+        title: "Alles für Heizung & Sanitär",
+        subtitle: "Ein komplettes Sortiment an Heizungsmaterialien, Sanitärbedarf und Ausstattung — alles an einem Ort in Svilajnac.",
+      },
+      heatingLabel: "Heizungsmaterial",
+      heatingTitle: "Heizsysteme & Komponenten",
+      plumbingLabel: "Sanitärmaterial",
+      plumbingTitle: "Sanitär & Sanitärtechnik",
+      brandsLabel: "Marken",
+      bathroomLabel: "Badausstattung",
+      bathroomTitle: "Fliesen, Spiegel & Armaturen",
+      bathroomBody: "Unser komplettes Sortiment an Badausstattung — von Premium-Fliesen bis zu Armaturen der weltweit führenden Hersteller — finden Sie auf unserer spezialisierten Website.",
+      bathroomCta: "nesakomerckeramika.com besuchen",
+      ctaLabel: "Besuchen Sie uns",
+      ctaTitle: "Besuchen Sie unseren Ausstellungsraum",
+      ctaBody: "Stevana Sinđelića 309, 35210 Svilajnac — geöffnet Montag–Freitag, 07:00–15:00 Uhr.",
+      ctaContact: "Rufen Sie uns an",
+    },
+    productsPage: {
+      hero: {
+        badge: "Sortiment",
+        title: "Unsere Produkte",
+        subtitle: "Röhrenheizkörper und Zubehör — zuverlässige Hausheizung seit über drei Jahrzehnten.",
+      },
+      badges: [
+        { icon: "shield", label: "Zertifizierte Qualität" },
+        { icon: "zap", label: "100% Qualität" },
+        { icon: "star", label: "5 Jahre Garantie" },
+      ],
+      sectionLabel: "Sortiment",
+      sectionTitle: "Röhrenheizkörper & Ausstattung",
+      cta: "Details",
+      products: [
+        {
+          id: "nk-lux",
+          name: "NK LUX",
+          tag: "Premium",
+          description: "Ein Röhrenheizkörper mit markantem, abgerundetem Profil. Ideal für Bäder — bietet Wärme und Platz zum Handtuchtrocknen mit elegantem Look.",
+          image: "/proizvodi/nk-lux.jpg",
+          href: "/de/products/nk-lux",
+        },
+        {
+          id: "nk-term",
+          name: "NK TERM 22",
+          tag: "Neu",
+          description: "Aus nahtgeschweißten Stahlrohren (Č 0146), Material DC01 nach EN 10305-3/5, \"D\"-Profil 30×40 mm und Ø22 mm Rundrohr-Lamellen.",
+          image: "/nx-term.png",
+          href: "/de/products/nk-term",
+        },
+        {
+          id: "nk-standard",
+          name: "NK STANDARD",
+          tag: "Bestseller",
+          description: "Ein Röhrenheizkörper, der sehr wenig Platz benötigt. Vorrangig für Bäder konzipiert, aber ebenso zu Hause in Wohnzimmern, Büros und Küchen.",
+          image: "/nx-standard.png",
+          href: "/de/products/nk-standard",
+        },
+        {
+          id: "center-connection",
+          name: "Mittelanschluss",
+          tag: "Zubehör",
+          description: "Der Mittelanschluss eines Röhrenheizkörpers dient der Wand-, Boden- oder kombinierten Fußbodenheizungs-Integration.",
+          image: "/img4.png",
+          href: "/de/products/nk-standard",
+        },
+        {
+          id: "with-heater",
+          name: "Mit Heizstab",
+          tag: "Option",
+          description: "Wir liefern auch Trockner mit optionalem Elektroheizstab über Wasser-/Thermofluid-Kombination. Die Heizleistung hängt von den Heizkörperabmessungen ab.",
+          image: "/img2.png",
+          href: "/de/products/nk-lux",
+        },
+        {
+          id: "accessories",
+          name: "Zubehör",
+          tag: "Programm",
+          description: "Das Neša-Komerc-Zubehörprogramm eignet sich für vertikale Montagen auf Stahl- oder Kunststoffflächen, in verschiedenen Abmessungen erhältlich.",
+          image: "/img5.png",
+          href: "/de/products/nk-standard",
+        },
+      ],
+    },
+    productionPage: {
+      hero: {
+        badge: "Unsere Produktion",
+        title: "Wo jeder Heizkörper entsteht",
+        subtitle: "Unser eigenes 6.000 m² großes Werk, Roboterschweißen und mehrstufige Qualitätskontrolle unter einem Dach in Svilajnac.",
+      },
+      stats: [
+        { value: "2001", label: "Produktionsbeginn" },
+        { value: "6.000 m²", label: "Werksfläche" },
+        { value: "7+", label: "Exportländer" },
+        { value: "5 J.", label: "Garantie auf jedes Produkt" },
+      ],
+      process: {
+        badge: "Wie wir es machen",
+        title: "Vom Rohmaterial zum Heizkörper",
+        subtitle: "Jeder Schritt unter voller Kontrolle — keine Kompromisse.",
+        steps: [
+          { number: "01", title: "Rohmaterialauswahl", body: "Wir beziehen Stahlrohre und -bleche ausschließlich von renommierten europäischen Lieferanten, jeweils mit vollständiger Qualitätsdokumentation." },
+          { number: "02", title: "Schneiden & Biegen", body: "CNC-Maschinen schneiden und biegen die Rohre präzise auf die exakten Abmessungen jedes Modells — Toleranz unter 0,5 mm." },
+          { number: "03", title: "Roboterschweißen", body: "Tunnel- und Roboterschweißanlagen liefern bei jedem einzelnen Stück eine homogene, wiederholbare Schweißnaht ohne menschlichen Fehler." },
+          { number: "04", title: "Lackierung & Finish", body: "Elektrostatische Lackierung über die gesamte RAL-Palette. Die Schichtdicke wird vor und nach dem Aushärten gemessen." },
+          { number: "05", title: "Drucktest", body: "Jeder Heizkörper durchläuft vor der Verpackung einen Hydro-Test bei 10 bar — null Kompromisse, null Rückläufer." },
+          { number: "06", title: "Verpackung & Versand", body: "Schutzverpackung und strenge Logistik sorgen dafür, dass der Heizkörper unbeschädigt ankommt — pünktlich, an der richtigen Adresse." },
+        ],
+      },
+      quality: {
+        badge: "Zertifizierte Qualität",
+        title: "Strenge Prüfungen in jeder Phase",
+        body: "Unsere Heizkörper tragen alle relevanten europäischen Zertifikate. Das Qualitätsmanagementsystem nach SRPS ISO 9001:2015 garantiert, dass jedes Stück das Werk in voller Übereinstimmung mit den vorgeschriebenen Standards verlässt.",
+        pillars: [
+          { icon: "shield", title: "Zertifizierte Qualität", body: "Freigegebene Zulassungen für alle Modelle seit 2001." },
+          { icon: "zap", title: "Premium-Materialien", body: "Erstklassiger Stahl und EU-zertifizierte Beschichtungen." },
+          { icon: "cpu", title: "Serielle Rückverfolgung", body: "Jeder Heizkörper erhält einen eindeutigen Seriencode." },
+        ],
+      },
+      gallery: {
+        badge: "Galerie",
+        title: "Ein Blick in die Produktion",
+        subtitle: "Ein Moment aus unserem Werk — vom Rohmaterial bis zum fertigen Heizkörper.",
+      },
+      certificates: {
+        badge: "Unsere Zertifikate",
+        title: "Im Einklang mit internationalen Standards",
+        body: "Unser Engagement für Qualität wird durch anerkannte Zertifikate bestätigt. Das Unternehmen besitzt SRPS ISO 9001:2015 und SR EN 442-3:2014 — die Grundlage für den Eintritt in anspruchsvolle internationale Märkte.",
+        items: [
+          { title: "SRPS ISO 9001:2015", body: "Qualitätsmanagementsystem, das alle internen Prozesse von der Beschaffung bis zur Lieferung regelt." },
+          { title: "SR EN 442-3:2014", body: "Europäische Norm für Röhrenheizkörper, die technische Eigenschaften und Sicherheit bestätigt." },
+          { title: "Bericht der Fakultät für Maschinenbau", body: "Unabhängige Prüfung der thermischen und mechanischen Eigenschaften durch eine akkreditierte Institution." },
         ],
       },
     },
