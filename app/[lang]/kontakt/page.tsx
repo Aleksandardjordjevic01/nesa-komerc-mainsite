@@ -5,6 +5,13 @@ import ContactInfo from '@/components/ContactInfo';
 import ContactForm from '@/components/ContactForm';
 import ContactMap from '@/components/ContactMap';
 import Container from '@/components/Container';
+import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
+  return buildMetadata(lang, 'kontakt');
+}
 
 export default async function ContactPage({
   params,

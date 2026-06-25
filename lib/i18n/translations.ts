@@ -37,7 +37,7 @@ export const translations = {
           stat: "+30",
           subtitle: "Godina iskustva",
           description:
-            "Od 1994. godine gradimo partnerstva zasnovana na kvalitetu. Svaki radijator koji napusti naš pogon nosi garanciju funkcionalnosti i dugotrajnosti.",
+            "Od 1992. godine gradimo partnerstva zasnovana na kvalitetu. Svaki radijator koji napusti naš pogon nosi garanciju funkcionalnosti i dugotrajnosti.",
         },
         {
           category: "Kvalitet",
@@ -75,7 +75,7 @@ export const translations = {
         "Znanje i iskustvo zaposlenih, savremena tehnologija rada i unapređeni procesi proizvodnje omogućavaju da plasiramo proizvode koji imaju prepoznatljiv kvalitet.",
       tagline: "Kod nas je uvek toplo.",
       stats: [
-        { value: "1994", label: "Godina osnivanja" },
+        { value: "1992", label: "Godina osnivanja" },
         { value: "Trstenik", label: "Sedište" },
         { value: "+30", label: "Godina iskustva" },
         { value: "7+", label: "Zemalja u regionu" },
@@ -200,17 +200,6 @@ export const translations = {
           metaValue: "Svaki radni dan",
           highlight: "Brza isporuka",
         },
-        {
-          category: "Ekologija",
-          title: "Briga o životnoj sredini",
-          before:
-            "Nekontrolisano zagađenje i rasipanje resursa tokom procesa proizvodnje.",
-          after:
-            "Ekološki odgovorni procesi i materijali koji minimizuju uticaj na životnu sredinu.",
-          metaKey: "Standard",
-          metaValue: "ISO 14001",
-          highlight: "Zelena proizvodnja",
-        },
       ],
     },
     retail: {
@@ -276,7 +265,7 @@ export const translations = {
       badge: "O nama",
       title: "Svaka toplota počinje ovde",
       subtitle:
-        "Od 1994. gradimo partnerstva zasnovana na kvalitetu, tradiciji i posvećenosti svakom kupcu.",
+        "Od 1992. gradimo partnerstva zasnovana na kvalitetu, tradiciji i posvećenosti svakom kupcu.",
     },
     contactPage: {
       hero: {
@@ -329,7 +318,7 @@ export const translations = {
         badge: "Neša Komerc d.o.o.",
         title: "Osnivanje i rast",
         body1:
-          'Kompanija \"Neša Komerc\" d.o.o. je osnovana decembra 1992. godine, a proizvodnju cevastih radijatora započinje 2001. godine. Kompanija je postepenim napredovanjem i stalnim ulaganjem u novu tehnologiju prerasla u ozbiljnu industrijsku kompaniju.',
+          'Kompanija \"Neša Komerc\" d.o.o. je osnovana decembra 1992. godine, kada započinje i proizvodnju cevastih radijatora. Kompanija je postepenim napredovanjem i stalnim ulaganjem u novu tehnologiju prerasla u ozbiljnu industrijsku kompaniju.',
         body2:
           'Sedište kompanije je u Svilajncu u industrijskoj zoni, put za Požarevac, 110 km od Beograda. Danas se proizvodnja odvija u modernim industrijskim halama površine 6 000 m². U procesu proizvodnje zastupljena je najmodernija oprema renomiranih svetskih proizvođača (robotsko i tunelsko zavarivanje) i repromaterijal najpoznatijih evropskih firmi uz efikasnu organizaciju koja je potvrđena odgovarajućim sertifikatima.',
       },
@@ -469,7 +458,7 @@ export const translations = {
         subtitle: "Sopstveni pogon od 6 000 m², robotsko zavarivanje i višestepena kontrola kvaliteta sve pod jednim krovom u Svilajncu.",
       },
       stats: [
-        { value: "2001", label: "Godina prve proizvodnje" },
+        { value: "1992", label: "Godina prve proizvodnje" },
         { value: "6 000 m²", label: "Površina pogona" },
         { value: "7+", label: "Zemalja izvoza" },
         { value: "5 god.", label: "Garancija na svaki proizvod" },
@@ -492,7 +481,7 @@ export const translations = {
         title: "Stroge kontrole na svakom koraku",
         body: "Naši radijatori nose sve relevantne evropske sertifikate. Sistem menadžmenta kvalitetom po SRPS ISO 9001:2015 garantuje da svaki komad napušta pogon u skladu sa propisanim standardima.",
         pillars: [
-          { icon: "shield", title: "Sertifikovan kvalitet", body: "Prečišćeni atesti za sve modele od 2001." },
+          { icon: "shield", title: "Sertifikovan kvalitet", body: "Prečišćeni atesti za sve modele od 1992." },
           { icon: "zap", title: "Virtuelni materijali", body: "Čelik prve kategorije i EU premazi." },
           { icon: "cpu", title: "Striktni koder", body: "Svaki radijator dobija jedinstveni serijski kôd." },
         ],
@@ -548,7 +537,7 @@ export const translations = {
           stat: "+30",
           subtitle: "Years of experience",
           description:
-            "Since 1994 we have built partnerships grounded in quality. Every radiator leaving our facility carries a guarantee of performance and longevity.",
+            "Since 1992 we have built partnerships grounded in quality. Every radiator leaving our facility carries a guarantee of performance and longevity.",
         },
         {
           category: "Quality",
@@ -586,7 +575,7 @@ export const translations = {
         "The knowledge and experience of our employees, modern production technology and improved manufacturing processes allow us to deliver products with a recognisable standard of quality.",
       tagline: "It’s always warm with us.",
       stats: [
-        { value: "1994", label: "Founded" },
+        { value: "1992", label: "Founded" },
         { value: "Trstenik", label: "Headquarters" },
         { value: "+30", label: "Years of experience" },
         { value: "7+", label: "Countries in region" },
@@ -764,17 +753,6 @@ export const translations = {
           metaValue: "Every business day",
           highlight: "Fast delivery",
         },
-        {
-          category: "Environment",
-          title: "Environmental responsibility",
-          before:
-            "Uncontrolled pollution and resource waste during manufacturing.",
-          after:
-            "Environmentally responsible processes and materials that minimise our footprint.",
-          metaKey: "Standard",
-          metaValue: "ISO 14001",
-          highlight: "Green production",
-        },
       ],
     },
     notfound: {
@@ -787,7 +765,7 @@ export const translations = {
       badge: "About Us",
       title: "Every warmth starts here",
       subtitle:
-        "Since 1994, we have been building partnerships grounded in quality, tradition and dedication to every customer.",
+        "Since 1992, we have been building partnerships grounded in quality, tradition and dedication to every customer.",
     },
     contactPage: {
       hero: {
@@ -840,7 +818,7 @@ export const translations = {
         badge: "Neša Komerc d.o.o.",
         title: "Foundation & Growth",
         body1:
-          'Neša Komerc d.o.o. was founded in December 1992 and began manufacturing tubular radiators in 2001. Through steady progress and continuous investment in new technology, the company has grown into a serious industrial enterprise.',
+          'Neša Komerc d.o.o. was founded in December 1992, when it also began manufacturing tubular radiators. Through steady progress and continuous investment in new technology, the company has grown into a serious industrial enterprise.',
         body2:
           'The company is headquartered in Svilajnac, in the industrial zone on the road to Požarevac, 110 km from Belgrade. Today, production takes place in modern industrial halls covering 6,000 m². The manufacturing process employs state-of-the-art equipment from renowned world manufacturers (robotic and tunnel welding) and raw materials from the most reputable European companies, backed by an efficient organisation confirmed by the relevant certificates.',
       },
@@ -936,7 +914,7 @@ export const translations = {
           name: "NK TERM 22",
           tag: "New",
           description: "Made from seam steel tubes (Č 0146), DC01 material per EN 10305-3/5, \"D\" profile 30×40 mm and Ø22 mm round tube fins.",
-          image: "/nx-term.png",
+          image: "/proizvodi/nkterm.png",
           href: "/en/products/nk-term",
         },
         {
@@ -944,7 +922,7 @@ export const translations = {
           name: "NK STANDARD",
           tag: "Bestseller",
           description: "A tubular radiator that takes up very little space. Primarily designed for bathrooms but equally at home in living rooms, offices, and kitchens.",
-          image: "/nx-standard.png",
+          image: "/proizvodi/nkstandard.png",
           href: "/en/products/nk-standard",
         },
         {
@@ -952,7 +930,7 @@ export const translations = {
           name: "Centre connection",
           tag: "Accessory",
           description: "The centre connection on a tubular radiator is used for wall, floor or combined underfloor heating integration.",
-          image: "/img4.png",
+          image: "/proizvodi/prikljucak.png",
           href: "/en/products/nk-standard",
         },
         {
@@ -960,7 +938,7 @@ export const translations = {
           name: "With heater",
           tag: "Option",
           description: "We also supply dryers with an optional electric heater, via water/thermofluid combination. Heater output depends on radiator dimensions.",
-          image: "/img2.png",
+          image: "/proizvodi/sagrejacem.png",
           href: "/en/products/nk-lux",
         },
         {
@@ -980,7 +958,7 @@ export const translations = {
         subtitle: "Our own 6,000 m² facility, robotic welding and multi-stage quality control all under one roof in Svilajnac.",
       },
       stats: [
-        { value: "2001", label: "Year production began" },
+        { value: "1992", label: "Year production began" },
         { value: "6,000 m²", label: "Facility floor area" },
         { value: "7+", label: "Export countries" },
         { value: "5 yr.", label: "Warranty on every product" },
@@ -1003,7 +981,7 @@ export const translations = {
         title: "Strict checks at every stage",
         body: "Our radiators carry all relevant European certificates. The quality management system under SRPS ISO 9001:2015 guarantees that every piece leaves the facility in full compliance with prescribed standards.",
         pillars: [
-          { icon: "shield", title: "Certified quality", body: "Cleared approvals for all models since 2001." },
+          { icon: "shield", title: "Certified quality", body: "Cleared approvals for all models since 1992." },
           { icon: "zap", title: "Premium materials", body: "First-grade steel and EU-certified coatings." },
           { icon: "cpu", title: "Serial tracking", body: "Every radiator receives a unique serial code." },
         ],
@@ -1059,7 +1037,7 @@ export const translations = {
           stat: "+30",
           subtitle: "Jahre Erfahrung",
           description:
-            "Seit 1994 bauen wir Partnerschaften auf Basis von Qualität. Jeder Heizkörper, der unser Werk verlässt, trägt eine Garantie für Leistung und Langlebigkeit.",
+            "Seit 1992 bauen wir Partnerschaften auf Basis von Qualität. Jeder Heizkörper, der unser Werk verlässt, trägt eine Garantie für Leistung und Langlebigkeit.",
         },
         {
           category: "Qualität",
@@ -1097,7 +1075,7 @@ export const translations = {
         "Das Wissen und die Erfahrung unserer Mitarbeiter, moderne Produktionstechnologie und verbesserte Fertigungsprozesse ermöglichen es uns, Produkte mit einem unverkennbaren Qualitätsstandard zu liefern.",
       tagline: "Bei uns ist es immer warm.",
       stats: [
-        { value: "1994", label: "Gegründet" },
+        { value: "1992", label: "Gegründet" },
         { value: "Trstenik", label: "Hauptsitz" },
         { value: "+30", label: "Jahre Erfahrung" },
         { value: "7+", label: "Länder in der Region" },
@@ -1275,17 +1253,6 @@ export const translations = {
           metaValue: "Jeden Werktag",
           highlight: "Schnelle Lieferung",
         },
-        {
-          category: "Umwelt",
-          title: "Ökologische Verantwortung",
-          before:
-            "Unkontrollierte Umweltverschmutzung und Ressourcenverschwendung in der Fertigung.",
-          after:
-            "Umweltbewusste Prozesse und Materialien, die unseren Fußabdruck minimieren.",
-          metaKey: "Standard",
-          metaValue: "ISO 14001",
-          highlight: "Grüne Produktion",
-        },
       ],
     },
     notfound: {
@@ -1298,7 +1265,7 @@ export const translations = {
       badge: "Über uns",
       title: "Jede Wärme beginnt hier",
       subtitle:
-        "Seit 1994 bauen wir Partnerschaften auf Basis von Qualität, Tradition und Hingabe an jeden Kunden.",
+        "Seit 1992 bauen wir Partnerschaften auf Basis von Qualität, Tradition und Hingabe an jeden Kunden.",
     },
     contactPage: {
       hero: {
@@ -1351,7 +1318,7 @@ export const translations = {
         badge: "Neša Komerc d.o.o.",
         title: "Gründung & Wachstum",
         body1:
-          'Neša Komerc d.o.o. wurde im Dezember 1992 gegründet und begann 2001 mit der Fertigung von Röhrenheizkörpern. Durch stetigen Fortschritt und kontinuierliche Investitionen in neue Technologien hat sich das Unternehmen zu einem ernstzunehmenden Industriebetrieb entwickelt.',
+          'Neša Komerc d.o.o. wurde im Dezember 1992 gegründet und begann im selben Jahr mit der Fertigung von Röhrenheizkörpern. Durch stetigen Fortschritt und kontinuierliche Investitionen in neue Technologien hat sich das Unternehmen zu einem ernstzunehmenden Industriebetrieb entwickelt.',
         body2:
           'Das Unternehmen hat seinen Sitz in Svilajnac, in der Industriezone an der Straße nach Požarevac, 110 km von Belgrad entfernt. Heute findet die Produktion in modernen Industriehallen auf 6.000 m² statt. Im Fertigungsprozess kommen modernste Anlagen renommierter Welthersteller (Roboter- und Tunnelschweißen) sowie Rohstoffe der angesehensten europäischen Unternehmen zum Einsatz, untermauert von einer effizienten Organisation, die durch die entsprechenden Zertifikate bestätigt wird.',
       },
@@ -1447,7 +1414,7 @@ export const translations = {
           name: "NK TERM 22",
           tag: "Neu",
           description: "Aus nahtgeschweißten Stahlrohren (Č 0146), Material DC01 nach EN 10305-3/5, \"D\"-Profil 30×40 mm und Ø22 mm Rundrohr-Lamellen.",
-          image: "/nx-term.png",
+          image: "/proizvodi/nkterm.png",
           href: "/de/products/nk-term",
         },
         {
@@ -1455,7 +1422,7 @@ export const translations = {
           name: "NK STANDARD",
           tag: "Bestseller",
           description: "Ein Röhrenheizkörper, der sehr wenig Platz benötigt. Vorrangig für Bäder konzipiert, aber ebenso zu Hause in Wohnzimmern, Büros und Küchen.",
-          image: "/nx-standard.png",
+          image: "/proizvodi/nkstandard.png",
           href: "/de/products/nk-standard",
         },
         {
@@ -1463,7 +1430,7 @@ export const translations = {
           name: "Mittelanschluss",
           tag: "Zubehör",
           description: "Der Mittelanschluss eines Röhrenheizkörpers dient der Wand-, Boden- oder kombinierten Fußbodenheizungs-Integration.",
-          image: "/img4.png",
+          image: "/proizvodi/prikljucak.png",
           href: "/de/products/nk-standard",
         },
         {
@@ -1471,7 +1438,7 @@ export const translations = {
           name: "Mit Heizstab",
           tag: "Option",
           description: "Wir liefern auch Trockner mit optionalem Elektroheizstab über Wasser-/Thermofluid-Kombination. Die Heizleistung hängt von den Heizkörperabmessungen ab.",
-          image: "/img2.png",
+          image: "/proizvodi/sagrejacem.png",
           href: "/de/products/nk-lux",
         },
         {
@@ -1491,7 +1458,7 @@ export const translations = {
         subtitle: "Unser eigenes 6.000 m² großes Werk, Roboterschweißen und mehrstufige Qualitätskontrolle unter einem Dach in Svilajnac.",
       },
       stats: [
-        { value: "2001", label: "Produktionsbeginn" },
+        { value: "1992", label: "Produktionsbeginn" },
         { value: "6.000 m²", label: "Werksfläche" },
         { value: "7+", label: "Exportländer" },
         { value: "5 J.", label: "Garantie auf jedes Produkt" },
@@ -1514,7 +1481,7 @@ export const translations = {
         title: "Strenge Prüfungen in jeder Phase",
         body: "Unsere Heizkörper tragen alle relevanten europäischen Zertifikate. Das Qualitätsmanagementsystem nach SRPS ISO 9001:2015 garantiert, dass jedes Stück das Werk in voller Übereinstimmung mit den vorgeschriebenen Standards verlässt.",
         pillars: [
-          { icon: "shield", title: "Zertifizierte Qualität", body: "Freigegebene Zulassungen für alle Modelle seit 2001." },
+          { icon: "shield", title: "Zertifizierte Qualität", body: "Freigegebene Zulassungen für alle Modelle seit 1992." },
           { icon: "zap", title: "Premium-Materialien", body: "Erstklassiger Stahl und EU-zertifizierte Beschichtungen." },
           { icon: "cpu", title: "Serielle Rückverfolgung", body: "Jeder Heizkörper erhält einen eindeutigen Seriencode." },
         ],

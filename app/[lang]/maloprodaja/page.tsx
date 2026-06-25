@@ -3,6 +3,13 @@ import { translations, type Locale } from '@/lib/i18n/translations';
 import Container from '@/components/Container';
 import PageHero from '@/components/PageHero';
 import MaloprodajaGrid from '@/components/MaloprodajaGrid';
+import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
+  return buildMetadata(lang, 'maloprodaja');
+}
 
 export default async function MaloprodajaPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = (await params) as { lang: Locale };
@@ -57,7 +64,7 @@ export default async function MaloprodajaPage({ params }: { params: Promise<{ la
                 { value: '14+', label: isSr ? 'Kategorija proizvoda' : isDe ? 'Produktkategorien' : 'Product categories' },
                 { value: '30+', label: isSr ? 'Brendova u ponudi' : isDe ? 'Marken im Angebot' : 'Brands in stock' },
                 { value: '07–15', label: isSr ? 'Radno vreme' : isDe ? 'Öffnungszeiten' : 'Working hours' },
-                { value: '1994', label: isSr ? 'Godina osnivanja' : isDe ? 'Gründungsjahr' : 'Est. year' },
+                { value: '1992', label: isSr ? 'Godina osnivanja' : isDe ? 'Gründungsjahr' : 'Est. year' },
               ].map((s) => (
                 <div key={s.label} className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
                   <p className="text-[28px] font-black text-white">{s.value}</p>

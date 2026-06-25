@@ -3,6 +3,14 @@ import { translations, type Locale } from '@/lib/i18n/translations';
 import Container from '@/components/Container';
 import PageHero from '@/components/PageHero';
 import ProizvodiGrid from '@/components/ProizvodiGrid';
+import JsonLd from '@/components/JsonLd';
+import type { Metadata } from 'next';
+import { buildMetadata, productListSchema } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
+  return buildMetadata(lang, 'proizvodi');
+}
 
 export default async function ProductsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = (await params) as { lang: Locale };
@@ -10,6 +18,8 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
 
   return (
     <>
+      <JsonLd data={productListSchema(t.products, lang)} />
+
       {/* ── HERO ── */}
       <PageHero badge={t.hero.badge} title={t.hero.title} subtitle={t.hero.subtitle} />
 

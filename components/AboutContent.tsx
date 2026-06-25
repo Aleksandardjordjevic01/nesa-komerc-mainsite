@@ -27,7 +27,7 @@ export default function AboutContent({ lang }: { lang: Locale }) {
             <div className="mt-10 flex flex-wrap gap-6">
               {[
                 { value: '1992', label: lang === 'sr' ? 'Godina osnivanja' : lang === 'de' ? 'Gründungsjahr' : 'Year founded' },
-                { value: '2001', label: lang === 'sr' ? 'Početak proizvodnje' : lang === 'de' ? 'Produktionsbeginn' : 'Production start' },
+                { value: '1992', label: lang === 'sr' ? 'Početak proizvodnje' : lang === 'de' ? 'Produktionsbeginn' : 'Production start' },
                 { value: '6 000 m²', label: lang === 'sr' ? 'Površina pogona' : lang === 'de' ? 'Werksfläche' : 'Facility area' },
               ].map((item) => (
                 <div key={item.value} className="flex flex-col">

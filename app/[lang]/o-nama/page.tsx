@@ -6,6 +6,13 @@ import MissionVision from '@/components/MissionVision';
 import Features from '@/components/Features';
 import TeamSection from '@/components/TeamSection';
 import Testimonials from '@/components/Testimonials';
+import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
+  return buildMetadata(lang, 'o-nama');
+}
 
 export default async function AboutPage({
   params,

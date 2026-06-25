@@ -206,10 +206,10 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
 
               <p className="mt-5 text-[14px] leading-relaxed text-neutral-600 sm:text-[15px]">
                 {lang === 'sr'
-                  ? 'Od 2001. godine proizvodimo cevaste radijatore tipa STANDARD LUX i T-ŠANT. Radijatori se izrađuju od čeličnih cevi sa snagom od 300 do 2000 W i radnim pritiskom 6 bar.'
+                  ? 'Od 1992. godine proizvodimo cevaste radijatore tipa STANDARD LUX i T-ŠANT. Radijatori se izrađuju od čeličnih cevi sa snagom od 300 do 2000 W i radnim pritiskom 6 bar.'
                   : lang === 'de'
-                  ? 'Seit 2001 fertigen wir Röhrenheizkörper der Typen STANDARD LUX und T-ŠANT. Die Heizkörper werden aus Stahlrohren mit einer Leistung von 300 bis 2000 W und einem Arbeitsdruck von 6 bar gefertigt.'
-                  : 'Since 2001 we have manufactured STANDARD LUX and T-ŠANT tubular radiators. Radiators are made from steel tubes with output from 300 to 2000 W and 6 bar working pressure.'}
+                  ? 'Seit 1992 fertigen wir Röhrenheizkörper der Typen STANDARD LUX und T-ŠANT. Die Heizkörper werden aus Stahlrohren mit einer Leistung von 300 bis 2000 W und einem Arbeitsdruck von 6 bar gefertigt.'
+                  : 'Since 1992 we have manufactured STANDARD LUX and T-ŠANT tubular radiators. Radiators are made from steel tubes with output from 300 to 2000 W and 6 bar working pressure.'}
               </p>
               <p className="mt-3 text-[14px] leading-relaxed text-neutral-600 sm:text-[15px]">
                 {lang === 'sr'
@@ -221,7 +221,7 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
 
               <div className="mt-8 grid grid-cols-3 divide-x divide-neutral-100 rounded-xl border border-neutral-100 bg-neutral-50 sm:rounded-2xl">
                 {[
-                  { val: '2001', sub: lang === 'sr' ? 'Godina osnivanja' : lang === 'de' ? 'Gründungsjahr' : 'Est. year' },
+                  { val: '1992', sub: lang === 'sr' ? 'Godina osnivanja' : lang === 'de' ? 'Gründungsjahr' : 'Est. year' },
                   { val: '500–2000W', sub: lang === 'sr' ? 'Snaga' : lang === 'de' ? 'Leistung' : 'Output' },
                   { val: '6 bar', sub: lang === 'sr' ? 'Pritisak' : lang === 'de' ? 'Druck' : 'Pressure' },
                 ].map(s => (

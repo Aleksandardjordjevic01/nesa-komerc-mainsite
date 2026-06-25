@@ -5,6 +5,14 @@ import AboutSection from '@/components/AboutSection';
 import HeroCarousel from '@/components/HeroCarousel';
 import Advantages from '@/components/Advantages';
 import RetailSection from '@/components/RetailSection';
+import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
+  return buildMetadata(lang, 'home');
+}
+
 export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = (await params) as { lang: Locale };
 
