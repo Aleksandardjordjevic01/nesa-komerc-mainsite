@@ -47,12 +47,17 @@ function PdfIcon({ className }: { className?: string }) {
 export default function NavbarV2({ lang, forceScrolled = false }: NavbarV2Props) {
   const pathname = usePathname();
   const t = translations[lang].nav;
-  const [scrolled, setScrolled] = useState(forceScrolled);
+  const [scrollState, setScrollState] = useState(forceScrolled);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Routes with a light hero need the navbar in its solid (scrolled) state at the top.
+  const segments = pathname.split('/').filter(Boolean);
+  const isLightHeroRoute = segments[1] === 'proizvodi' && segments.length >= 3;
+  const scrolled = scrollState || forceScrolled || isLightHeroRoute;
 
   useEffect(() => {
     if (forceScrolled) return;
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    const onScroll = () => setScrollState(window.scrollY > 10);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, [forceScrolled]);
@@ -114,7 +119,7 @@ export default function NavbarV2({ lang, forceScrolled = false }: NavbarV2Props)
           </a>
         </div>
 
-        {/* Logo — centered */}
+        {/* Logo - centered */}
         <Link href={`/${lang}`} className="shrink-0">
           <Image
             src="/nesa-komerc-logo.svg"
@@ -161,7 +166,7 @@ export default function NavbarV2({ lang, forceScrolled = false }: NavbarV2Props)
         </div>
       </Container>
 
-      {/* Divider between rows — desktop only */}
+      {/* Divider between rows - desktop only */}
       <div className={`hidden border-t transition-colors duration-300 lg:block ${scrolledBorder}`} />
 
       {/* ── DESKTOP bottom row: nav links ── */}
@@ -184,7 +189,7 @@ export default function NavbarV2({ lang, forceScrolled = false }: NavbarV2Props)
         </ul>
       </Container>
 
-      {/* Bottom border — desktop only */}
+      {/* Bottom border - desktop only */}
       <div className={`hidden border-t transition-colors duration-300 lg:block ${scrolledBorder}`} />
 
       {/* ── MOBILE top bar ── */}
@@ -228,7 +233,7 @@ export default function NavbarV2({ lang, forceScrolled = false }: NavbarV2Props)
         </button>
       </Container>
 
-      {/* ── MOBILE menu — full screen overlay ── */}
+      {/* ── MOBILE menu - full screen overlay ── */}
       <div
         className={`fixed inset-0 z-40 flex flex-col bg-white transition-all duration-300 ease-in-out lg:hidden ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'

@@ -16,7 +16,7 @@ export interface Partner {
   branches?: PartnerBranch[];
 }
 
-/** [lng, lat] — MapLibre uses [longitude, latitude] order */
+/** [lng, lat] - MapLibre uses [longitude, latitude] order */
 export const CITY_COORDS: Record<string, [number, number]> = {
   Batajnica:          [20.2842, 44.9044],
   Beograd:            [20.4633, 44.8176],

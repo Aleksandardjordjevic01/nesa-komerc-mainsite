@@ -30,7 +30,7 @@ export default function AboutContent({ lang }: { lang: Locale }) {
                 { value: '1992', label: lang === 'sr' ? 'Početak proizvodnje' : lang === 'de' ? 'Produktionsbeginn' : 'Production start' },
                 { value: '6 000 m²', label: lang === 'sr' ? 'Površina pogona' : lang === 'de' ? 'Werksfläche' : 'Facility area' },
               ].map((item) => (
-                <div key={item.value} className="flex flex-col">
+                <div key={item.label} className="flex flex-col">
                   <span className="bg-linear-to-r from-orange-500 to-red-600 bg-clip-text text-[32px] font-extrabold leading-none tracking-[-0.03em] text-transparent">
                     {item.value}
                   </span>

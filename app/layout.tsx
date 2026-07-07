@@ -12,11 +12,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Proizvodnja cevastih radijatora i oprema za grejanje i vodovod`,
+    default: `${SITE_NAME} - Proizvodnja cevastih radijatora i oprema za grejanje i vodovod`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Domaći proizvođač cevastih radijatora i sušača peškira, uz veleprodaju i maloprodaju opreme za grejanje i vodovod. Neša Komerc, Svilajnac — kvalitet od 1992.",
+    "Domaći proizvođač cevastih radijatora i sušača peškira, uz veleprodaju i maloprodaju opreme za grejanje i vodovod. Neša Komerc, Svilajnac - kvalitet od 1992.",
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,

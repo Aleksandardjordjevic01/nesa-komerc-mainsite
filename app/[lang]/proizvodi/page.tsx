@@ -45,10 +45,10 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
               </h2>
               <p className="mt-3 text-[14px] leading-relaxed text-neutral-400">
                 {lang === 'sr'
-                  ? 'Radijatore izrađujemo po meri — sve dimenzije, sve boje RAL palete, sa ili bez elektro-grejača.'
+                  ? 'Radijatore izrađujemo po meri - sve dimenzije, sve boje RAL palete, sa ili bez elektro-grejača.'
                   : lang === 'de'
-                  ? 'Wir fertigen Heizkörper nach Maß — alle Abmessungen, alle Farben der RAL-Palette, mit oder ohne Elektroheizstab.'
-                  : 'We manufacture radiators to order — any dimensions, any RAL colour, with or without an electric heater.'}
+                  ? 'Wir fertigen Heizkörper nach Maß - alle Abmessungen, alle Farben der RAL-Palette, mit oder ohne Elektroheizstab.'
+                  : 'We manufacture radiators to order - any dimensions, any RAL colour, with or without an electric heater.'}
               </p>
             </div>
             <div className="flex shrink-0 flex-col gap-3 sm:flex-row">

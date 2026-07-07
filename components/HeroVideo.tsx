@@ -26,7 +26,7 @@ export default function HeroVideo({ lang }: { lang: Locale }) {
       />
       <div className="absolute inset-0 bg-black/30" />
 
-      {/* Text overlay — animates only once video starts */}
+      {/* Text overlay - animates only once video starts */}
       <div className="absolute bottom-20 left-0 right-0">
         <Container>
         <p

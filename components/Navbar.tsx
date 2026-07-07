@@ -92,7 +92,7 @@ export default function Navbar({ lang }: NavbarProps) {
           />
         </Link>
 
-        {/* Navigation links — left, next to logo */}
+        {/* Navigation links - left, next to logo */}
         <ul className="hidden flex-1 items-center gap-10 lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>

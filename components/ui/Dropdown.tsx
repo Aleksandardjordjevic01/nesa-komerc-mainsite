@@ -15,7 +15,7 @@ interface DropdownProps {
   id?: string;
 }
 
-export default function Dropdown({ options, value, onChange, placeholder = '—', id }: DropdownProps) {
+export default function Dropdown({ options, value, onChange, placeholder = '-', id }: DropdownProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

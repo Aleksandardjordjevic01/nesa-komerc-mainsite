@@ -30,9 +30,9 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
     absoluteTitle: true,
     content: {
       sr: {
-        title: 'Neša Komerc — Proizvodnja cevastih radijatora i oprema za grejanje i vodovod',
+        title: 'Neša Komerc - Proizvodnja cevastih radijatora i oprema za grejanje i vodovod',
         description:
-          'Neša Komerc iz Svilajnca — domaći proizvođač cevastih radijatora i sušača peškira, uz veleprodaju i maloprodaju kompletne opreme za grejanje i vodovod. Kvalitet i garancija od 1992.',
+          'Neša Komerc iz Svilajnca - domaći proizvođač cevastih radijatora i sušača peškira, uz veleprodaju i maloprodaju kompletne opreme za grejanje i vodovod. Kvalitet i garancija od 1992.',
         keywords: [
           'cevasti radijatori', 'sušači peškira', 'kupatilski radijatori', 'proizvođač radijatora Srbija',
           'oprema za grejanje', 'vodovodni materijal', 'kotlovi', 'toplotne pumpe', 'podno grejanje',
@@ -40,9 +40,9 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
         ],
       },
       en: {
-        title: 'Neša Komerc — Tubular Radiator Manufacturer & Heating/Plumbing Supplier',
+        title: 'Neša Komerc - Tubular Radiator Manufacturer & Heating/Plumbing Supplier',
         description:
-          'Neša Komerc from Svilajnac, Serbia — manufacturer of tubular radiators and towel warmers, plus wholesale and retail of complete heating and plumbing equipment. Quality since 1992.',
+          'Neša Komerc from Svilajnac, Serbia - manufacturer of tubular radiators and towel warmers, plus wholesale and retail of complete heating and plumbing equipment. Quality since 1992.',
         keywords: [
           'tubular radiators', 'towel radiators', 'bathroom radiators', 'radiator manufacturer Serbia',
           'heating equipment', 'plumbing supplies', 'boilers', 'heat pumps', 'underfloor heating',
@@ -50,9 +50,9 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
         ],
       },
       de: {
-        title: 'Neša Komerc — Hersteller von Röhrenheizkörpern & Heizungs-/Sanitärgroßhandel',
+        title: 'Neša Komerc - Hersteller von Röhrenheizkörpern & Heizungs-/Sanitärgroßhandel',
         description:
-          'Neša Komerc aus Svilajnac, Serbien — Hersteller von Röhrenheizkörpern und Handtuchheizkörpern sowie Groß- und Einzelhandel für Heizung und Sanitär. Qualität seit 1992.',
+          'Neša Komerc aus Svilajnac, Serbien - Hersteller von Röhrenheizkörpern und Handtuchheizkörpern sowie Groß- und Einzelhandel für Heizung und Sanitär. Qualität seit 1992.',
         keywords: [
           'Röhrenheizkörper', 'Handtuchheizkörper', 'Badheizkörper', 'Heizkörperhersteller Serbien',
           'Heizungstechnik', 'Sanitärbedarf', 'Kessel', 'Wärmepumpen', 'Fußbodenheizung',
@@ -67,7 +67,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
       sr: {
         title: 'Cevasti radijatori i sušači peškira',
         description:
-          'NK LUX, NK TERM 22 i NK STANDARD — cevasti radijatori i sušači peškira sopstvene proizvodnje. Snaga 300–2000 W, sve dimenzije i boje RAL palete, garancija 5 godina.',
+          'NK LUX, NK TERM 22 i NK STANDARD - cevasti radijatori i sušači peškira sopstvene proizvodnje. Snaga 300–2000 W, sve dimenzije i boje RAL palete, garancija 5 godina.',
         keywords: [
           'cevasti radijatori', 'sušači peškira', 'kupatilski radijatori', 'NK LUX', 'NK TERM 22',
           'NK STANDARD', 'radijatori po meri', 'radijatori RAL boje', 'čelični radijatori',
@@ -76,7 +76,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
       en: {
         title: 'Tubular Radiators & Towel Warmers',
         description:
-          'NK LUX, NK TERM 22 and NK STANDARD — our own tubular radiators and towel warmers. Output 300–2000 W, any dimension, full RAL palette, 5-year warranty.',
+          'NK LUX, NK TERM 22 and NK STANDARD - our own tubular radiators and towel warmers. Output 300–2000 W, any dimension, full RAL palette, 5-year warranty.',
         keywords: [
           'tubular radiators', 'towel warmers', 'bathroom radiators', 'NK LUX', 'NK TERM 22',
           'NK STANDARD', 'custom radiators', 'RAL colour radiators', 'steel radiators',
@@ -85,7 +85,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
       de: {
         title: 'Röhrenheizkörper & Handtuchheizkörper',
         description:
-          'NK LUX, NK TERM 22 und NK STANDARD — Röhrenheizkörper und Handtuchheizkörper aus eigener Fertigung. Leistung 300–2000 W, alle Maße, gesamte RAL-Palette, 5 Jahre Garantie.',
+          'NK LUX, NK TERM 22 und NK STANDARD - Röhrenheizkörper und Handtuchheizkörper aus eigener Fertigung. Leistung 300–2000 W, alle Maße, gesamte RAL-Palette, 5 Jahre Garantie.',
         keywords: [
           'Röhrenheizkörper', 'Handtuchheizkörper', 'Badheizkörper', 'NK LUX', 'NK TERM 22',
           'NK STANDARD', 'Heizkörper nach Maß', 'Heizkörper RAL-Farben', 'Stahlheizkörper',
@@ -129,27 +129,27 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
     path: '/maloprodaja',
     content: {
       sr: {
-        title: 'Maloprodaja — oprema za grejanje i vodovod',
+        title: 'Maloprodaja - oprema za grejanje i vodovod',
         description:
-          'Maloprodajni salon u Svilajncu: kotlovi, toplotne pumpe, radijatori, podno grejanje, cevi i fitinzi, pumpe, ventili i bojleri — preko 30 brendova opreme za grejanje i vodovod na jednom mestu.',
+          'Maloprodajni salon u Svilajncu: kotlovi, toplotne pumpe, radijatori, podno grejanje, cevi i fitinzi, pumpe, ventili i bojleri - preko 30 brendova opreme za grejanje i vodovod na jednom mestu.',
         keywords: [
           'maloprodaja grejanje', 'oprema za grejanje', 'vodovodni materijal', 'kotlovi', 'toplotne pumpe',
           'podno grejanje', 'cevi i fitinzi', 'bojleri', 'ventili', 'Svilajnac',
         ],
       },
       en: {
-        title: 'Retail — Heating & Plumbing Equipment',
+        title: 'Retail - Heating & Plumbing Equipment',
         description:
-          'Retail showroom in Svilajnac: boilers, heat pumps, radiators, underfloor heating, pipes and fittings, pumps, valves and water heaters — over 30 brands of heating and plumbing equipment in one place.',
+          'Retail showroom in Svilajnac: boilers, heat pumps, radiators, underfloor heating, pipes and fittings, pumps, valves and water heaters - over 30 brands of heating and plumbing equipment in one place.',
         keywords: [
           'heating equipment retail', 'plumbing supplies', 'boilers', 'heat pumps', 'underfloor heating',
           'pipes and fittings', 'water heaters', 'valves', 'Svilajnac',
         ],
       },
       de: {
-        title: 'Einzelhandel — Heizung & Sanitär',
+        title: 'Einzelhandel - Heizung & Sanitär',
         description:
-          'Ausstellungsraum in Svilajnac: Kessel, Wärmepumpen, Heizkörper, Fußbodenheizung, Rohre und Fittings, Pumpen, Ventile und Warmwasserspeicher — über 30 Marken für Heizung und Sanitär.',
+          'Ausstellungsraum in Svilajnac: Kessel, Wärmepumpen, Heizkörper, Fußbodenheizung, Rohre und Fittings, Pumpen, Ventile und Warmwasserspeicher - über 30 Marken für Heizung und Sanitär.',
         keywords: [
           'Heizung Einzelhandel', 'Sanitärbedarf', 'Kessel', 'Wärmepumpen', 'Fußbodenheizung',
           'Rohre und Fittings', 'Warmwasserspeicher', 'Ventile', 'Svilajnac',
@@ -195,7 +195,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
       sr: {
         title: 'O nama',
         description:
-          'Neša Komerc d.o.o. — porodična kompanija iz Svilajnca osnovana 1992. Proizvođač cevastih radijatora sa izvozom u 7+ zemalja regiona i garancijom kvaliteta od 5 godina.',
+          'Neša Komerc d.o.o. - porodična kompanija iz Svilajnca osnovana 1992. Proizvođač cevastih radijatora sa izvozom u 7+ zemalja regiona i garancijom kvaliteta od 5 godina.',
         keywords: [
           'o nama', 'Neša Komerc', 'proizvođač radijatora', 'porodična firma', 'Svilajnac',
           'istorijat', 'izvoz radijatori',
@@ -204,7 +204,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
       en: {
         title: 'About Us',
         description:
-          'Neša Komerc d.o.o. — a family company from Svilajnac founded in 1992. Manufacturer of tubular radiators exporting to 7+ countries in the region, with a 5-year quality guarantee.',
+          'Neša Komerc d.o.o. - a family company from Svilajnac founded in 1992. Manufacturer of tubular radiators exporting to 7+ countries in the region, with a 5-year quality guarantee.',
         keywords: [
           'about us', 'Neša Komerc', 'radiator manufacturer', 'family company', 'Svilajnac',
           'company history', 'radiator export',
@@ -213,7 +213,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
       de: {
         title: 'Über uns',
         description:
-          'Neša Komerc d.o.o. — ein Familienunternehmen aus Svilajnac, gegründet 1992. Hersteller von Röhrenheizkörpern mit Export in 7+ Länder der Region und 5 Jahren Garantie.',
+          'Neša Komerc d.o.o. - ein Familienunternehmen aus Svilajnac, gegründet 1992. Hersteller von Röhrenheizkörpern mit Export in 7+ Länder der Region und 5 Jahren Garantie.',
         keywords: [
           'über uns', 'Neša Komerc', 'Heizkörperhersteller', 'Familienunternehmen', 'Svilajnac',
           'Firmengeschichte', 'Heizkörper Export',
@@ -227,7 +227,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
       sr: {
         title: 'Kontakt',
         description:
-          'Kontaktirajte Neša Komerc — Stevana Sinđelića 30, 35210 Svilajnac. Telefon +381 35 8814 077, office@nesa-komerc.com. Veleprodaja, maloprodaja i proizvodnja radijatora.',
+          'Kontaktirajte Neša Komerc - Stevana Sinđelića 30, 35210 Svilajnac. Telefon +381 35 8814 077, office@nesa-komerc.com. Veleprodaja, maloprodaja i proizvodnja radijatora.',
         keywords: [
           'kontakt', 'Neša Komerc kontakt', 'Svilajnac', 'telefon', 'adresa', 'veleprodaja', 'maloprodaja',
         ],
@@ -235,7 +235,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
       en: {
         title: 'Contact',
         description:
-          'Contact Neša Komerc — Stevana Sinđelića 30, 35210 Svilajnac, Serbia. Phone +381 35 8814 077, office@nesa-komerc.com. Wholesale, retail and radiator production.',
+          'Contact Neša Komerc - Stevana Sinđelića 30, 35210 Svilajnac, Serbia. Phone +381 35 8814 077, office@nesa-komerc.com. Wholesale, retail and radiator production.',
         keywords: [
           'contact', 'Neša Komerc contact', 'Svilajnac', 'phone', 'address', 'wholesale', 'retail',
         ],
@@ -243,7 +243,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
       de: {
         title: 'Kontakt',
         description:
-          'Kontaktieren Sie Neša Komerc — Stevana Sinđelića 30, 35210 Svilajnac, Serbien. Telefon +381 35 8814 077, office@nesa-komerc.com. Großhandel, Einzelhandel und Heizkörperproduktion.',
+          'Kontaktieren Sie Neša Komerc - Stevana Sinđelića 30, 35210 Svilajnac, Serbien. Telefon +381 35 8814 077, office@nesa-komerc.com. Großhandel, Einzelhandel und Heizkörperproduktion.',
         keywords: [
           'Kontakt', 'Neša Komerc Kontakt', 'Svilajnac', 'Telefon', 'Adresse', 'Großhandel', 'Einzelhandel',
         ],
@@ -253,7 +253,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
 };
 
 /* ── Build localized alternates (canonical + hreflang) ── */
-function buildAlternates(routePath: string, lang: Locale): Metadata['alternates'] {
+export function buildAlternates(routePath: string, lang: Locale): Metadata['alternates'] {
   const languages: Record<string, string> = {};
   for (const loc of ALL_LOCALES) {
     languages[HREFLANG[loc]] = `/${loc}${routePath}`;
@@ -371,6 +371,28 @@ export function productListSchema(
         manufacturer: { '@id': `${SITE_URL}/#organization` },
       },
     })),
+  };
+}
+
+export function productSchema(
+  product: { name: string; description: string; image: string },
+  lang: Locale,
+  slug: string,
+) {
+  const category =
+    lang === 'sr' ? 'Cevasti radijatori' : lang === 'de' ? 'Röhrenheizkörper' : 'Tubular radiators';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    '@id': `${SITE_URL}/${lang}/proizvodi/${slug}#product`,
+    name: product.name,
+    description: product.description,
+    image: product.image.startsWith('http') ? product.image : `${SITE_URL}${product.image}`,
+    category,
+    inLanguage: HREFLANG[lang],
+    url: `${SITE_URL}/${lang}/proizvodi/${slug}`,
+    brand: { '@type': 'Brand', name: SITE_NAME },
+    manufacturer: { '@id': `${SITE_URL}/#organization` },
   };
 }
 

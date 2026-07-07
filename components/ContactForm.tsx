@@ -140,7 +140,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
             options={t.departments}
             value={form.department}
             onChange={(val) => setForm(prev => ({ ...prev, department: val }))}
-            placeholder="—"
+            placeholder="-"
           />
         </div>
 

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { translations, type Locale } from '@/lib/i18n/translations';
 import Container from '@/components/Container';
 
@@ -48,20 +49,26 @@ export default function RetailSection({ lang }: { lang: Locale }) {
 
             const cardClass = "group flex flex-col gap-5 rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/10";
 
-            return cat.href ? (
-              <li key={cat.name}>
-                <a
-                  href={cat.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cardClass}
-                >
+            if (!cat.href) {
+              return (
+                <li key={cat.name} className={cardClass}>
                   {inner}
-                </a>
-              </li>
-            ) : (
-              <li key={cat.name} className={cardClass}>
-                {inner}
+                </li>
+              );
+            }
+
+            const isExternal = cat.href.startsWith('http');
+            return (
+              <li key={cat.name}>
+                {isExternal ? (
+                  <a href={cat.href} target="_blank" rel="noopener noreferrer" className={cardClass}>
+                    {inner}
+                  </a>
+                ) : (
+                  <Link href={cat.href} className={cardClass}>
+                    {inner}
+                  </Link>
+                )}
               </li>
             );
           })}

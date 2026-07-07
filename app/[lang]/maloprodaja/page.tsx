@@ -22,7 +22,7 @@ export default async function MaloprodajaPage({ params }: { params: Promise<{ la
       {/* ── HERO ── */}
       <PageHero badge={t.hero.badge} title={t.hero.title} subtitle={t.hero.subtitle} />
 
-      {/* ── GRIDS — client component with modal ── */}
+      {/* ── GRIDS - client component with modal ── */}
       <MaloprodajaGrid
         lang={lang}
         heatingLabel={t.heatingLabel}

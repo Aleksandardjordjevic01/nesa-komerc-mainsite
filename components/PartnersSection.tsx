@@ -32,7 +32,7 @@ export default function PartnersSection({ lang }: { lang: Locale }) {
         </h2>
       </Container>
 
-      {/* Marquee — intentionally full-width, no Container, fades at edges */}
+      {/* Marquee - intentionally full-width, no Container, fades at edges */}
       <div
         className="flex"
         style={{

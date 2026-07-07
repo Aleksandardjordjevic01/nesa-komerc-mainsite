@@ -34,7 +34,7 @@ export default function ContactMap() {
 
       mapInstance = map;
 
-      // Custom marker element — orange gradient box with white logo
+      // Custom marker element - orange gradient box with white logo
       const el = document.createElement('div');
       el.style.cssText = `
         width:48px;height:48px;

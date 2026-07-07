@@ -66,7 +66,7 @@ function buildMarkerCanvas(logo: HTMLImageElement): HTMLCanvasElement {
   ctx.shadowBlur = 0;
   ctx.shadowOffsetY = 0;
 
-  // Draw white logo — no left/right padding, 4px top/bottom
+  // Draw white logo - no left/right padding, 4px top/bottom
   const whiteLogo = makeWhiteLogo(logo, LOGO_W * 2, LOGO_H * 2);
   const offX = 0;
   const offY = (ICON_SIZE - LOGO_H) / 2;
@@ -130,7 +130,7 @@ export default function SalesNetworkMap({ onCityClick }: { onCityClick?: (city: 
             data: { type: 'FeatureCollection', features },
           });
 
-          // Symbol layer — rendered on the WebGL canvas, never drifts
+          // Symbol layer - rendered on the WebGL canvas, never drifts
           map.addLayer({
             id: 'partner-pins',
             type: 'symbol',

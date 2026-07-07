@@ -23,7 +23,7 @@ export default function Footer({ lang }: { lang: Locale }) {
 
   return (
     <footer className="bg-neutral-950">
-      {/* Top accent line — flame sweep */}
+      {/* Top accent line - flame sweep */}
       <div className="flame-border">
         <div className="flame-border-glow" />
         <div className="flame-border-line" />

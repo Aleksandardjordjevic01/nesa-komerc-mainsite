@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Neša Komerc',
     short_name: 'Neša Komerc',
     description:
-      'Proizvodnja cevastih radijatora i oprema za grejanje i vodovod — Neša Komerc, Svilajnac.',
+      'Proizvodnja cevastih radijatora i oprema za grejanje i vodovod - Neša Komerc, Svilajnac.',
     start_url: '/sr',
     display: 'standalone',
     background_color: '#ffffff',

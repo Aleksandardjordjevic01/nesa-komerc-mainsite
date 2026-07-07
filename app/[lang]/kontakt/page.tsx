@@ -39,7 +39,7 @@ export default async function ContactPage({
         </Container>
       </section>
 
-      {/* Map — full viewport width */}
+      {/* Map - full viewport width */}
       <section className="bg-white pb-0 pt-0">
         <div className="h-110 w-full">
           <ContactMap />

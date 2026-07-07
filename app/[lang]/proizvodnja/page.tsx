@@ -165,7 +165,7 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
       {/* ══════ 1. HERO ══════ */}
       <PageHero badge={t.hero.badge} title={t.hero.title} subtitle={t.hero.subtitle} />
 
-      {/* ══════ 2. RADIJATORA — split ══════ */}
+      {/* ══════ 2. RADIJATORA - split ══════ */}
       <section className="bg-white py-16 md:py-24 lg:py-40">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16 xl:gap-24">
@@ -236,7 +236,7 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
         </Container>
       </section>
 
-      {/* ══════ 3. CERTIFIED — dark ══════ */}
+      {/* ══════ 3. CERTIFIED - dark ══════ */}
       <section className="bg-neutral-950 py-16 md:py-24 lg:py-40">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-24">
@@ -262,7 +262,7 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
             {/* Text */}
             <div className="order-1 lg:order-2">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-orange-500">
-                {lang === 'sr' ? 'Virtualni kvalitet — Stručni kadar' : lang === 'de' ? 'Premium-Qualität — Expertenteam' : 'Premium quality — Expert team'}
+                {lang === 'sr' ? 'Virtualni kvalitet - Stručni kadar' : lang === 'de' ? 'Premium-Qualität - Expertenteam' : 'Premium quality - Expert team'}
               </span>
               <h2 className="mt-2 text-[32px] font-black uppercase leading-[1.05] tracking-tight text-white sm:text-[40px] md:text-[48px] lg:text-[58px]">
                 {lang === 'sr' ? 'Sertifikovani proizvodi' : lang === 'de' ? 'Zertifizierte Produkte' : 'Certified products'}
@@ -432,7 +432,7 @@ export default function ProductionPage({ params }: { params: Promise<{ lang: str
               </p>
             </div>
 
-            {/* Right — accordion */}
+            {/* Right - accordion */}
             <div className="flex flex-col">
               {t.certificates.items.map((item, i) => (
                 <Accordion
