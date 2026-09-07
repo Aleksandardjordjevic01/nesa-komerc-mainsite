@@ -136,9 +136,23 @@ export default function Footer({ lang }: { lang: Locale }) {
 
       {/* ── Bottom bar ── */}
       <div className="border-t border-neutral-800">
-        <Container className="flex items-center justify-between py-5">
-          <p className="text-xs text-neutral-600">{t.copyright}</p>
-          <p className="text-xs text-neutral-600">Neša Komerc d.o.o.</p>
+        <Container className="flex flex-col items-center gap-2 py-5 text-center sm:flex-row sm:justify-between sm:gap-4 sm:text-left">
+          <p className="text-xs text-neutral-600">
+            {t.copyright}
+            <span className="mx-1 text-neutral-700">|</span>
+            <span className="block sm:inline">
+              Design &amp; Developed by{" "}
+              <a
+                href="https://zeroblynk.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-500 transition-colors duration-200 hover:text-white"
+              >
+                ZeroBlynk
+              </a>
+            </span>
+          </p>
+          <p className="text-xs text-neutral-600">Neša Komerc D.O.O.</p>
         </Container>
       </div>
     </footer>

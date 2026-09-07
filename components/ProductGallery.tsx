@@ -40,20 +40,20 @@ export default function ProductGallery({ images, name, tag, tagColor }: Props) {
   }, [lightbox, list.length]);
 
   return (
-    <div>
+    <>
       {/* Main image */}
       <button
         type="button"
         onClick={open}
         aria-label={name}
-        className="group relative block w-full cursor-zoom-in overflow-hidden rounded-3xl bg-neutral-100 ring-1 ring-neutral-200"
+        className="group relative row-start-1 block w-full cursor-zoom-in overflow-hidden rounded-3xl bg-neutral-100 ring-1 ring-neutral-200"
       >
-        <div className="relative aspect-[16/9] w-full">
+        <div className="relative aspect-[4/3] w-full">
           <Image
             src={current}
             alt={name}
             fill
-            sizes="(max-width: 1024px) 100vw, 600px"
+            sizes="(max-width: 1024px) 100vw, 700px"
             className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
             priority
           />
@@ -75,18 +75,18 @@ export default function ProductGallery({ images, name, tag, tagColor }: Props) {
 
       {/* Thumbnails */}
       {list.length > 1 && (
-        <div className="mt-3 flex flex-wrap gap-3">
+        <div className="row-start-2 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5">
           {list.map((src, i) => (
             <button
               key={i}
               type="button"
               onClick={() => setActive(i)}
               aria-label={`${name} ${i + 1}`}
-              className={`relative aspect-[16/9] w-28 shrink-0 overflow-hidden rounded-xl bg-neutral-100 ring-1 transition-all duration-200 ${
+              className={`relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-neutral-100 ring-1 transition-all duration-200 ${
                 i === active ? 'ring-2 ring-orange-400' : 'ring-neutral-200 hover:ring-orange-200'
               }`}
             >
-              <Image src={src} alt={`${name} ${i + 1}`} fill sizes="112px" className="object-cover" />
+              <Image src={src} alt={`${name} ${i + 1}`} fill sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 140px" className="object-cover" />
             </button>
           ))}
         </div>
@@ -150,6 +150,6 @@ export default function ProductGallery({ images, name, tag, tagColor }: Props) {
         </div>,
         document.body
       )}
-    </div>
+    </>
   );
 }

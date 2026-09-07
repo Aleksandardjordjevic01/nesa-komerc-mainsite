@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "postbuild": "cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/",
+    "start": "node --max-old-space-size=128 --max-semi-space-size=2 .next/standalone/server.js",
     "lint": "eslint"
   },
   "dependencies": {
@@ -13,12 +14,14 @@
     "lucide-react": "^1.21.0",
     "maplibre-gl": "^5.24.0",
     "next": "16.2.6",
+    "nodemailer": "^9.0.3",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

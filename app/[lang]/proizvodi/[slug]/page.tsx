@@ -85,16 +85,13 @@ export default async function ProductDetailPage({
     contact: isSr ? 'Kontaktirajte nas' : isDe ? 'Kontaktieren Sie uns' : 'Contact us',
     highlightsLabel: isSr ? 'Ključne karakteristike' : isDe ? 'Kerndaten' : 'Key specs',
     ctaLabel: isSr ? 'Zainteresovani ste?' : isDe ? 'Interessiert?' : 'Interested?',
-    ctaTitle: isSr
-      ? 'Zatražite ponudu za ovaj radijator'
-      : isDe
-      ? 'Fordern Sie ein Angebot für diesen Heizkörper an'
-      : 'Request a quote for this radiator',
+    ctaTitleLine1: isSr ? 'Zatražite ponudu' : isDe ? 'Fordern Sie ein Angebot' : 'Request a quote',
+    ctaTitleLine2: isSr ? 'za ovaj radijator' : isDe ? 'für diesen Heizkörper an' : 'for this radiator',
     ctaBody: isSr
-      ? 'Izrađujemo po meri - sve dimenzije, sve boje RAL palete, sa ili bez elektro-grejača.'
+      ? 'Izrađujemo po meri sve dimenzije, sve boje RAL palete, sa ili bez elektro-grejača.'
       : isDe
-      ? 'Wir fertigen nach Maß - alle Abmessungen, alle Farben der RAL-Palette, mit oder ohne Elektroheizstab.'
-      : 'We manufacture to order - any dimension, any RAL colour, with or without an electric heater.',
+      ? 'Wir fertigen nach Maß alle Abmessungen, alle Farben der RAL-Palette, mit oder ohne Elektroheizstab.'
+      : 'We manufacture to order any dimension, any RAL colour, with or without an electric heater.',
   };
 
   const highlights = [
@@ -108,7 +105,7 @@ export default async function ProductDetailPage({
       <JsonLd data={productSchema(product, lang, slug)} />
 
       {/* ══════ HERO - light split ══════ */}
-      <section className="relative overflow-hidden bg-white pb-16 pt-32 md:pb-24 md:pt-44">
+      <section className="relative overflow-hidden bg-white pb-8 pt-32 md:pb-8 md:pt-44">
         <div className="pointer-events-none absolute -top-40 right-0 h-150 w-150 rounded-full bg-orange-500/5 blur-[120px]" />
 
         <Container className="relative">
@@ -121,15 +118,14 @@ export default async function ProductDetailPage({
             <span className="text-neutral-700">{product.name}</span>
           </nav>
 
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="grid grid-cols-1 gap-y-3 lg:grid-cols-2 lg:items-start lg:gap-x-16 lg:gap-y-3">
             {/* Gallery */}
             <ProductGallery images={galleryImages} name={product.name} tag={product.tag} tagColor={tagColor} />
 
-
             {/* Info */}
-            <div>
+            <div className="row-start-3 lg:row-start-1 lg:col-start-2 lg:self-center">
               <div className="mb-5 h-[2px] w-10 rounded-full bg-gradient-to-r from-orange-500 to-red-600" />
-              <h1 className="text-[40px] font-black uppercase leading-none tracking-tight text-neutral-900 sm:text-[52px] md:text-[64px]">
+              <h1 className="text-[40px] font-black uppercase leading-none tracking-tight text-neutral-900 sm:text-[52px]">
                 {product.name}
               </h1>
               <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-neutral-600">
@@ -173,7 +169,7 @@ export default async function ProductDetailPage({
 
       {/* ══════ TECHNICAL SPECIFICATIONS ══════ */}
       {spec && (
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-white py-8 md:py-8">
           <Container>
             <ProductSpecs spec={spec} loc={loc} />
           </Container>
@@ -184,9 +180,12 @@ export default async function ProductDetailPage({
       <section className="bg-neutral-950 py-16 md:py-20">
         <Container>
           <div className="flex flex-col items-center gap-8 text-center md:flex-row md:items-center md:justify-between md:text-left">
-            <div className="max-w-lg">
+            <div className="max-w-2xl">
               <p className="text-[11px] font-semibold uppercase tracking-widest text-orange-500">{t.ctaLabel}</p>
-              <h2 className="mt-2 text-[28px] font-black tracking-tight text-white md:text-[36px]">{t.ctaTitle}</h2>
+              <h2 className="mt-2 text-[28px] font-black tracking-tight text-white md:text-[36px]">
+                {t.ctaTitleLine1} <br className="md:hidden" />
+                {t.ctaTitleLine2}
+              </h2>
               <p className="mt-3 text-[14px] leading-relaxed text-neutral-400">{t.ctaBody}</p>
             </div>
             <Link

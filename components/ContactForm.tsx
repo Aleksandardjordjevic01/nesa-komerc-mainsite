@@ -10,6 +10,8 @@ export default function ContactForm({ lang }: { lang: Locale }) {
   const t = (translations[lang] ?? translations['sr']).contactPage.form;
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
   const [form, setForm] = useState({
     name: '',
     company: '',
@@ -25,9 +27,23 @@ export default function ContactForm({ lang }: { lang: Locale }) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(false);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error('request failed');
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const inputClass =
@@ -159,8 +175,29 @@ export default function ContactForm({ lang }: { lang: Locale }) {
           />
         </div>
 
-        <ReusableButton variant="primary" type="submit" className="w-full justify-center">
-          {t.submit}
+        {error && (
+          <p className="text-[13px] font-medium text-red-600">
+            {lang === 'sr'
+              ? 'Došlo je do greške. Pokušajte ponovo ili nas kontaktirajte telefonom.'
+              : lang === 'de'
+              ? 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder rufen Sie uns an.'
+              : 'Something went wrong. Please try again or contact us by phone.'}
+          </p>
+        )}
+
+        <ReusableButton
+          variant="primary"
+          type="submit"
+          disabled={submitting}
+          className="w-full justify-center disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          {submitting
+            ? lang === 'sr'
+              ? 'Slanje...'
+              : lang === 'de'
+              ? 'Wird gesendet...'
+              : 'Sending...'
+            : t.submit}
         </ReusableButton>
       </form>
     </div>

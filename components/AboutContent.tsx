@@ -43,7 +43,7 @@ export default function AboutContent({ lang }: { lang: Locale }) {
           {/* Image */}
           <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl">
             <Image
-              src="https://www.nesa-komerc.com/wp-content/uploads/elementor/thumbs/KOC1710_result-pojtzye5su11mcbl0f5g4o7t0gzlurlzfgeofk1ixs.jpg"
+              src="/production/pr2.webp"
               alt={lang === 'sr' ? 'Neša Komerc pogon' : lang === 'de' ? 'Neša Komerc Werk' : 'Neša Komerc facility'}
               fill
               className="object-cover"
